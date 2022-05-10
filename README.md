@@ -47,9 +47,9 @@ Gamificação é utilizar elementos de jogos (como rankings, pontuações e conq
 - Banco de dados/SQL: https://youtu.be/rX2I7OjLqWE
 
 ### Ferramentas
-Visual Studio 2022 Community em: https://visualstudio.microsoft.com/pt-br/downloads/
-SQL Express em: https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
-MS SQL em: https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
-POSTMAN: https://www.postman.com/downloads/
-GIT: https://git-scm.com/downloads
-Criar conta em: https://azure.microsoft.com/pt-br/services/devops/
+- Visual Studio 2022 Community: https://visualstudio.microsoft.com/pt-br/downloads/
+- SQL Express: https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
+- MS SQL: https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
+- POSTMAN: https://www.postman.com/downloads/
+- GIT: https://git-scm.com/downloads
+- Criar conta: https://azure.microsoft.com/pt-br/services/devops/
