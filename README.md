@@ -53,3 +53,7 @@ Gamificação é utilizar elementos de jogos (como rankings, pontuações e conq
 - POSTMAN: https://www.postman.com/downloads/
 - GIT: https://git-scm.com/downloads
 - Criar conta: https://azure.microsoft.com/pt-br/services/devops/
+
+### Figma
+- [FigJam](https://www.figma.com/file/afFgCK9uTFLcOwqdtek5CH/CollegeMath)
+- [Wireframe](https://www.figma.com/file/WxX5SQ5hK9OouGBDO2G9EQ/CollegeMath)
