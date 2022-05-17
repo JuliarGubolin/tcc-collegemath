@@ -15,7 +15,7 @@ Gamificação é utilizar elementos de jogos (como rankings, pontuações e conq
 - Lógica matemática
 - Funções
 
-## Links úteis e ferrametas utilizadas (disponibilizadas pelo professor Wemerson)
+## Links úteis e ferramentas utilizadas (disponibilizadas pelo professor Wemerson)
 - Dicas para aprender programar: https://youtu.be/ZtMzB5CoekE
 - Praticar inglês: https://youtu.be/pFyb_v2j3GY
 - Duolingo: https://play.google.com/store/apps/details?id=com.duolingo&hl=pt_BR&gl=US
@@ -54,6 +54,6 @@ Gamificação é utilizar elementos de jogos (como rankings, pontuações e conq
 - GIT: https://git-scm.com/downloads
 - Criar conta: https://azure.microsoft.com/pt-br/services/devops/
 
-### Figma
+## Figma
 - [FigJam](https://www.figma.com/file/afFgCK9uTFLcOwqdtek5CH/CollegeMath)
 - [Wireframe](https://www.figma.com/file/WxX5SQ5hK9OouGBDO2G9EQ/CollegeMath)
