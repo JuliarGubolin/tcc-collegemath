@@ -1,4 +1,5 @@
 ﻿using API_aprendendo.Data;
+using API_aprendendo.DTO;
 using API_aprendendo.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +32,13 @@ namespace API_aprendendo.Controllers
                - 401: não autorizado
                - 200: ok*/
             var usuarios = _context.Usuarios.ToList();
+            var usuariosDTO = usuarios.Select(item => new UsuarioDTO
+            {
+                Id = item.Id,
+                Nome= item.Nome,
+                Email = item.Email,
+                Senha = item.Senha
+            }).ToList();
 
             #region ListaEstatica Usuários
             //var usuarios = new List<Usuario>();
@@ -58,13 +66,22 @@ namespace API_aprendendo.Controllers
 
             //return Ok(usuarios);
             #endregion
-            return Ok(usuarios);
+            return Ok(usuariosDTO);
         }
         [HttpPost]
         // Recebe um JSON com os dados para serem salvos
-        public IActionResult Insert(Usuario usuario)
+        //Usamos UsuarioDTO pois ele será o responsável por obter e enviar os dados
+        //para a tela, para que a classe não faça isso e possamos separar responsabilidades
+
+        public IActionResult Insert(UsuarioDTO usuarioDTO)
         {
             //var userTeste = usuario;
+            var usuario = new Usuario
+            {
+                Nome = usuarioDTO.Nome,
+                Email = usuarioDTO.Email,
+                Senha = usuarioDTO.Senha
+            };
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
             return Ok(usuario);
@@ -72,18 +89,18 @@ namespace API_aprendendo.Controllers
         //Put para atualização
         [HttpPut]
         // Recebe um JSON com os dados para serem salvos
-        public IActionResult Update(Usuario usuario)
+        public IActionResult Update(UsuarioDTO usuarioDTO)
         {
             //var userTeste = usuario;
-            var usuarioAlterado = _context.Usuarios.Find(usuario.Id);
+            var usuarioAlterado = _context.Usuarios.Find(usuarioDTO.Id);
             //O usuário pode ser nulo
             if(usuarioAlterado == null)
             {
                 return NotFound();
             }
-            usuarioAlterado.Nome = usuario.Nome;
-            usuarioAlterado.Email = usuario.Email;
-            usuarioAlterado.Senha = usuario.Senha;
+            usuarioAlterado.Nome = usuarioDTO.Nome;
+            usuarioAlterado.Email = usuarioDTO.Email;
+            usuarioAlterado.Senha = usuarioDTO.Senha;
             _context.Usuarios.Update(usuarioAlterado);
             _context.SaveChanges();
             return Ok(usuarioAlterado);
@@ -120,7 +137,14 @@ namespace API_aprendendo.Controllers
             {
                 return NotFound();
             }
-            return Ok(usuario);
+            var usuarioDTO = new UsuarioDTO
+            {
+                Id = usuario.Id,
+                Nome = usuario.Nome,
+                Email = usuario.Email,
+                Senha = usuario.Senha
+            };
+            return Ok(usuarioDTO);
         }
     }
 }
