@@ -57,3 +57,11 @@ Gamificação é utilizar elementos de jogos (como rankings, pontuações e conq
 ## Figma
 - [FigJam](https://www.figma.com/file/afFgCK9uTFLcOwqdtek5CH/CollegeMath)
 - [Wireframe](https://www.figma.com/file/WxX5SQ5hK9OouGBDO2G9EQ/CollegeMath)
+
+## Aulas gravadas no YouTube
+- [Lógica de programação e POO pt.1](https://youtu.be/t_YZjhWl1Uk)
+- [Lógica de programação e POO pt.2](https://youtu.be/juUgu8t-hjI)
+- [Introdução a WebAPI pt.1](https://youtu.be/FqqwNULELLo)
+- [Introdução a WebAPI pt.2](https://youtu.be/J1LoWISN6TI)
+- [WebAPI e conexão com o BD com Entity Framework Core pt.1](https://youtu.be/Cld4xVxY3CU)
+- [WebAPI e conexão com o BD com Entity Framework Core pt.2](https://youtu.be/PWoMecAYqSs)
