@@ -1,0 +1,12 @@
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Application.deps.json
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Application.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Application.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.csproj.AssemblyReference.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.AssemblyInfoInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.AssemblyInfo.cs
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.csproj.CoreCompileInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\refint\CollegeMath.Application.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\ref\CollegeMath.Application.dll

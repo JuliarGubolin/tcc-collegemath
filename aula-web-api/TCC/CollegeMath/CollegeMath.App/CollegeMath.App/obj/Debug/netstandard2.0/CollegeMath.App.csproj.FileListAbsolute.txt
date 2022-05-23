@@ -1,0 +1,15 @@
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\bin\Debug\netstandard2.0\CollegeMath.App.deps.json
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\bin\Debug\netstandard2.0\CollegeMath.App.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\bin\Debug\netstandard2.0\CollegeMath.App.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.csproj.AssemblyReference.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.AssemblyInfoInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.AssemblyInfo.cs
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.csproj.CoreCompileInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\XamlC.stamp
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\refint\CollegeMath.App.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\CollegeMath.App.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\ref\CollegeMath.App.dll

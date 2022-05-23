@@ -1,0 +1,17 @@
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Infra.deps.json
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Infra.runtimeconfig.json
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Infra.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Infra.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Domain.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\bin\Debug\net6.0\CollegeMath.Domain.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.csproj.AssemblyReference.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.AssemblyInfoInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.AssemblyInfo.cs
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.csproj.CoreCompileInputs.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.csproj.CopyComplete
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\refint\CollegeMath.Infra.dll
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.pdb
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\CollegeMath.Infra.genruntimeconfig.cache
+D:\workspace\tcc-collegemath\aula-web-api\TCC\CollegeMath\CollegeMath.Infra\obj\Debug\net6.0\ref\CollegeMath.Infra.dll
