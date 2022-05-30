@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zo+hBh5+m4YoSpE7lxod3NlMz4DkllzYQMGhIamDOk9vrLW9HQrij8RiVd0x3A078jv5b1sWplf4AHYHbZgbTA==",
+  "dgSpecHash": "ZBbhGTJLhFLjZ01Z59TDqEuV2WBMIUujDJW/7z2zxfYiFacZUzoPx0iPGJ+pn4+bzvKaoI6ztRnIXrK+nSYaZQ==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gisla\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\gisla\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9v9gbT6/ZcVAHLF1hx5fMbrgOeA6ogNDLon5wYX2NWb/vvXCrU07Ze9wyLYKUyXU8oSk9I++Huz8xPUC/DDe+Q==",
+  "dgSpecHash": "XA6Zm9E2at1ceNlv/HUhYkn10fGK0oyhKMMKjeUR9cHLa3ol+XlPDwsyh73BS23lKFpJvic7A/DHpGf6/hchhQ==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
+  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gisla\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gisla\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

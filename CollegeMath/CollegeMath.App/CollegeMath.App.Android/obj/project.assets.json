@@ -3178,11 +3178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
+      "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
       "projectName": "CollegeMath.App.Android",
-      "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
+      "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
       "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\obj\\",
+      "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3203,8 +3203,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
-              "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
+            "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
+              "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
             }
           }
         }

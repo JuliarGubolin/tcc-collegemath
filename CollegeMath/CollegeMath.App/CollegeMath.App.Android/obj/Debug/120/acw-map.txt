@@ -1,6 +1,9 @@
 CollegeMath.App.Droid.MainActivity, CollegeMath.App.Android;crc648afe69b379e36071.MainActivity
 CollegeMath.App.Droid.MainActivity;crc648afe69b379e36071.MainActivity
 collegemath.app.droid.MainActivity;crc648afe69b379e36071.MainActivity
+CollegeMath.App.Droid.Models.Custom.RoundedEntryRenderAndroid, CollegeMath.App.Android;crc64def18f6d120746b2.RoundedEntryRenderAndroid
+CollegeMath.App.Droid.Models.Custom.RoundedEntryRenderAndroid;crc64def18f6d120746b2.RoundedEntryRenderAndroid
+collegemath.app.droid.models.custom.RoundedEntryRenderAndroid;crc64def18f6d120746b2.RoundedEntryRenderAndroid
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner

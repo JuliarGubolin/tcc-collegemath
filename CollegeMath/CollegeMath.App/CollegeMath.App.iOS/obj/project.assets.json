@@ -988,11 +988,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+      "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
       "projectName": "CollegeMath.App.iOS",
-      "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+      "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
       "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\obj\\",
+      "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1013,8 +1013,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
-              "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
+            "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
+              "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
             }
           }
         }

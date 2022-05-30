@@ -3,6 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollegeMath.App.App">
     <Application.Resources>
-
+        <!--Parametros personalizados-->
+        <Color x:Key="backgroundColor">#202060</Color>
+        <Color x:Key="buttonColor1">#502080</Color>
+        <Color x:Key="buttonColor2">#b030b0</Color>
+        <Color x:Key="buttonColor3">#6c91bf</Color>
+        <Color x:Key="buttonColor4">#5bc8af</Color>
+        <!-- ___________________________________ -->
+        <!--Style personalizado: Botões-->
+        <Style TargetType="Button" x:Key="btnLogica">
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4,4,4,4"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor2}"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="btnFuncoes">
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4,4,4,4"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor2}"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="btnConjuntos">
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4,4,4,4"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor3}"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="btnLoginCadastro">
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonColor4}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="8,8,8,8"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="Padding" Value="4,4,4,4"></Setter>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor4}"></Setter>
+        </Style>
+        <!-- ___________________________________ -->
+        <!--Style geral-->
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="BarTextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+        </Style>
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Padding" Value="8" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest" Value="120" />
+        </Style>
     </Application.Resources>
 </Application>

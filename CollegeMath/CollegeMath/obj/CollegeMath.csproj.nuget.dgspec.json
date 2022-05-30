@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath\\CollegeMath.csproj": {}
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath\\CollegeMath.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
         "projectName": "CollegeMath.Application",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
         "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\obj\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
         "projectName": "CollegeMath.Domain",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
         "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\obj\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,14 +120,14 @@
         }
       }
     },
-    "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
         "projectName": "CollegeMath.Infra",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
         "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\obj\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -148,8 +148,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
-                "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj"
+              "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
+                "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj"
               }
             }
           }
@@ -204,14 +204,14 @@
         }
       }
     },
-    "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath\\CollegeMath.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath\\CollegeMath.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath\\CollegeMath.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath\\CollegeMath.csproj",
         "projectName": "CollegeMath",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath\\CollegeMath.csproj",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath\\CollegeMath.csproj",
         "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath\\obj\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -232,11 +232,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
-                "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj"
+              "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
+                "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj"
               },
-              "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
-                "projectPath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj"
+              "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
+                "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj"
               }
             }
           }

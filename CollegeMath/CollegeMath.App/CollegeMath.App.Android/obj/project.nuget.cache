@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uP+TkcbTG9rdnKmOvNx3thH6NUlMxakvEJ5VkFLXa1nJwr4OnYiRvndeR0XlaLTpF92F9KCPm4xPiBgSzoWXQg==",
+  "dgSpecHash": "KVRKgP+leKD7FsfYuTuHcYqdquPCmyllf4Kiod95+9I/naIn4aj/PKtgrsjifDaSj87PkvnMrQQpJqk92NeGxQ==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\tcc-collegemath\\aula-web-api\\TCC\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
+  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gisla\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\gisla\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
