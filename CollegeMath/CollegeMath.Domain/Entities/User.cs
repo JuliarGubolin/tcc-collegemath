@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CollegeMath.Domain.Entities
 {
-    public class Usuario : EntityBase
+    public class User : EntityBase
     {
         public string Name { get; set; }
         public string UserName { get; set; }

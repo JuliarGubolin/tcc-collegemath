@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "En5RE2tviwb+nHGcQIzd6wcP90+AgvbE8OvxZh4kbIoAkbWC/9vSRSfl68/AEUVyhcI1FFJwnw0Y1oXNpUgGsQ==",
+  "dgSpecHash": "BW6lcs8iWDeiufmNq+RtnSwB/UJGxAx8x48vYEzETX0NQH6uAjM+DW7wmgRZxmwjrUMlUaaLrb1WbxTm57fM9g==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+  "projectFilePath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

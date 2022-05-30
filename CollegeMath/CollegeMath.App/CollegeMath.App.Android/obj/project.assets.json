@@ -3172,25 +3172,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gisla\\.nuget\\packages\\": {},
-    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\wemer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
+      "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
       "projectName": "CollegeMath.App.Android",
-      "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
-      "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\obj\\",
+      "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\CollegeMath.App.Android.csproj",
+      "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3203,8 +3198,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
-              "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
+            "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
+              "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
             }
           }
         }

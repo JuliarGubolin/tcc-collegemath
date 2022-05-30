@@ -1,10 +1,5 @@
 ﻿using CollegeMath.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CollegeMath.Infra.Context
 {
@@ -14,6 +9,20 @@ namespace CollegeMath.Infra.Context
         {
 
         }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<User> Usuarios { get; set; }
+
+        public DbSet<Content> Contents { get; set; }
+
+        public DbSet<Level> Levels { get; set; }
+
+        public DbSet<Question> Questions { get; set; }
+
+        public DbSet<Alternative> Alternatives { get; set; }
+
+        public DbSet<ImageQuestion> ImageQuestion { get; set; }
+
+        public DbSet<QuestionType> QuestionTypes { get; set; }
+
+        public DbSet<UserQuestionHistory> UserQuestionHistory { get; set; }
     }
 }

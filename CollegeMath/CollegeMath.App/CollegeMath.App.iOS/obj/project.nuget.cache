@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZBbhGTJLhFLjZ01Z59TDqEuV2WBMIUujDJW/7z2zxfYiFacZUzoPx0iPGJ+pn4+bzvKaoI6ztRnIXrK+nSYaZQ==",
+  "dgSpecHash": "Sa3Js0EG6HKMz5IJHBVgXnvKCTcA2/ArRcoPpCOsBJoqKYE2+UqkwKl7jJrCCpAbnGTizx/dNcVzVtSm/pVdVw==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+  "projectFilePath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gisla\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\wemer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\wemer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\wemer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

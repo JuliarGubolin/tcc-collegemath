@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj": {}
+    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj": {
+    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+        "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
         "projectName": "CollegeMath.App.iOS",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
-        "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\obj\\",
+        "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+        "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
-                "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
+              "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
+                "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj"
               }
             }
           }
@@ -65,21 +61,20 @@
         }
       }
     },
-    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
+    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj",
+        "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj",
         "projectName": "CollegeMath.App",
-        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj",
-        "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\obj\\",
+        "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\CollegeMath.App.csproj",
+        "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.App\\CollegeMath.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +125,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
