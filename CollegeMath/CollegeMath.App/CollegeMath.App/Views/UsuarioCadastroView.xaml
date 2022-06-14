@@ -26,11 +26,6 @@
                         TextTransform="None"
                         Style="{StaticResource btnLoginCadastro}"    
                         />
-                    <Button x:Name="btnVoltar"
-                            ImageSource="arrowleftsolid.png"
-                        Text="Voltar"
-                        TextTransform="None"
-                        Style="{StaticResource btnLoginCadastro}"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

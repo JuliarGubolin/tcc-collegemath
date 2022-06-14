@@ -9,6 +9,8 @@
         <Color x:Key="buttonColor2">#b030b0</Color>
         <Color x:Key="buttonColor3">#6c91bf</Color>
         <Color x:Key="buttonColor4">#5bc8af</Color>
+        <Color x:Key="buttonBackground">#2b2b80</Color>
+        
         <!-- ___________________________________ -->
         <!--Style personalizado: Botões-->
         <Style TargetType="Button" x:Key="btnLogica">
@@ -20,14 +22,35 @@
             <Setter Property="TextTransform" Value="None"/>
             <Setter Property="BorderColor" Value="{StaticResource buttonColor2}"></Setter>
         </Style>
+        <Style TargetType="Button" x:Key="btnNiveis">
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonBackground}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4,32,4,32"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor1}"></Setter>
+        </Style>
         <Style TargetType="Button" x:Key="btnFuncoes">
-            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonBackground}" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="CornerRadius" Value="4"/>
             <Setter Property="Margin" Value="4,4,4,4"/>
             <Setter Property="FontSize" Value="Small"/>
             <Setter Property="TextTransform" Value="None"/>
-            <Setter Property="BorderColor" Value="{StaticResource buttonColor2}"></Setter>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor1}"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="btnAlternativaQuestoesF">
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonColor1}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4,4,4,4"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor1}"></Setter>
         </Style>
         <Style TargetType="Button" x:Key="btnConjuntos">
             <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
@@ -56,7 +79,7 @@
             <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
         </Style>
         <Style TargetType="ContentPage">
-            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
             <Setter Property="Padding" Value="8" />
         </Style>
         <Style TargetType="Button">

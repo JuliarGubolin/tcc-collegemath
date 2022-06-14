@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CollegeMath.App.Models.Custom"
-             x:Class="CollegeMath.App.Views.LoginView">
-    <ContentPage.Content >
+             x:Class="CollegeMath.App.Views.LoginView"
+             BackgroundColor="{StaticResource backgroundColor}">
+    <ContentPage.Content>
         <StackLayout Margin="12, 12, 12, 12">
             <StackLayout>
                 <StackLayout Padding="10">
@@ -20,7 +21,7 @@
                        IsPassword="True" Placeholder="Senha" PlaceholderColor="#8E8E8E" Margin="0,0,0,20" TextColor="Black" FontSize="Small"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button x:Name="btnLogin" Style="{StaticResource btnLoginCadastro}" Text="Login"></Button>
+                <Button x:Name="btnLogin" Style="{StaticResource btnLoginCadastro}" Text="Login" Clicked="btnLogin_Clicked"></Button>
                 <Button x:Name="btnCadastrar" Style="{StaticResource btnLoginCadastro}" Text="Cadastre-se" Clicked="btnCadastrar_Clicked"></Button>
             </StackLayout>
         </StackLayout>

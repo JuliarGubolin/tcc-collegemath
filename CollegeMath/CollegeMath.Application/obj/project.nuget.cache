@@ -1,8 +1,40 @@
 {
   "version": 2,
-  "dgSpecHash": "BW6lcs8iWDeiufmNq+RtnSwB/UJGxAx8x48vYEzETX0NQH6uAjM+DW7wmgRZxmwjrUMlUaaLrb1WbxTm57fM9g==",
+  "dgSpecHash": "ssJZMqhHMVd66UBa42/adUZ5q5nizX+hZIKFMFi8xmWbXImyCvA8rfTA/+Y8trNNJypdrDr90EubISahk7X90w==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gisla\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\opentk\\3.0.1\\opentk.3.0.1.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\opentk.glcontrol\\3.0.1\\opentk.glcontrol.3.0.1.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms.platform.wpf\\4.8.0.1451\\xamarin.forms.platform.wpf.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'OpenTK 3.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "OpenTK",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'OpenTK.GLControl 3.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "OpenTK.GLControl",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -30,3 +30,7 @@ D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Deb
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\ref\CollegeMath.App.dll
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\UsuarioCadastroView.xaml.g.cs
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\HomeView.xaml.g.cs
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\FunctionsHomeView.xaml.g.cs
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\AjudaFuncoesView.xaml.g.cs
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.App\CollegeMath.App\obj\Debug\netstandard2.0\Views\Level1_Function.xaml.g.cs

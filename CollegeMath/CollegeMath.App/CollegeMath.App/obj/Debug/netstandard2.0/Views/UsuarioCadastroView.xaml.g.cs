@@ -32,9 +32,6 @@ namespace CollegeMath.App.Views {
         private global::Xamarin.Forms.Button btnSalvar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnVoltar;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UsuarioCadastroView));
             txtNome = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtNome");
@@ -42,7 +39,6 @@ namespace CollegeMath.App.Views {
             txtSenha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtSenha");
             txtSenhaConfirma = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtSenhaConfirma");
             btnSalvar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnSalvar");
-            btnVoltar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnVoltar");
         }
     }
 }

@@ -18,8 +18,12 @@ namespace CollegeMath.App.Views
         }
         private void btnCadastrar_Clicked(object sender, EventArgs e)
         {
-            var usuarioCadastroView = new UsuarioCadastroView();
-            this.Navigation.PushAsync(usuarioCadastroView);
+            this.Navigation.PushModalAsync(new UsuarioCadastroView());
+        }
+
+        private void btnLogin_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new HomeView());
         }
     }
 }

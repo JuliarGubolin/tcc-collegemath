@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:teste="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="CollegeMath.App.Views.HomeView"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="{StaticResource backgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" >
+                <Frame BackgroundColor="{StaticResource backgroundColor}" >
+                    <StackLayout HorizontalOptions="End">
+                        <ImageButton x:Name="btnAjudaHome" Source="lightbulbHelp.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaHome_Clicked"></ImageButton>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Escolha um conteúdo" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="White" Margin="0,16,0,0"></Label>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="StartAndExpand" Margin="0,0,0,32">
+            <Button
+                x:Name="btnFuncoes"
+                Margin="8"
+                Text="Funções"
+                TextTransform="None"
+                FontSize="Medium"
+                WidthRequest      ="140"
+                HeightRequest     ="140"
+                CornerRadius      ="70"
+                VerticalOptions   ="Center"
+                HorizontalOptions ="Center"
+                BackgroundColor   ="#2b2b80"
+                BorderColor="{StaticResource buttonColor4}"
+                BorderWidth="2"
+                Clicked="btnFuncoes_Clicked"
+                />
+                <Button
+                x:Name="btnLogica"
+                Margin="8"
+                Text="Lógica"
+                TextTransform="None"
+                FontSize="Medium"
+                WidthRequest      ="140"
+                HeightRequest     ="140"
+                CornerRadius      ="70"
+                VerticalOptions   ="Center"
+                HorizontalOptions ="Center"
+                BackgroundColor   ="#2b2b80"
+                BorderColor="{StaticResource buttonColor4}"
+                BorderWidth="2"
+                />
+                <Button
+                x:Name="btnConjuntos"
+                Margin="8"
+                Text="Conjuntos"
+                TextTransform="None"
+                FontSize="Medium"
+                WidthRequest      ="140"
+                HeightRequest     ="140"
+                CornerRadius      ="70"
+                VerticalOptions   ="Center"
+                HorizontalOptions ="Center"
+                BackgroundColor   ="#2b2b80"
+                BorderColor="{StaticResource buttonColor4}"
+                BorderWidth="2"
+                />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

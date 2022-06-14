@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {}
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
         "projectName": "CollegeMath.Domain",
-        "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
-        "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\obj\\",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj",
+        "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +43,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,24 +68,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
         "projectName": "CollegeMath.Infra",
-        "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
-        "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Infra\\obj\\",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\CollegeMath.Infra.csproj",
+        "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
-                "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj"
+              "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj": {
+                "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Domain\\CollegeMath.Domain.csproj"
               }
             }
           }
@@ -123,6 +135,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
             }
           },
           "imports": [
@@ -140,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

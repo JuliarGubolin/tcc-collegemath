@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {}
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
+    "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+        "projectUniqueName": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
         "projectName": "CollegeMath.Application",
-        "projectPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
-        "packagesPath": "C:\\Users\\wemer\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\CollegeMath\\CollegeMath\\CollegeMath.Application\\obj\\",
+        "projectPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\CollegeMath.Application.csproj",
+        "packagesPath": "C:\\Users\\gisla\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wemer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gisla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +43,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

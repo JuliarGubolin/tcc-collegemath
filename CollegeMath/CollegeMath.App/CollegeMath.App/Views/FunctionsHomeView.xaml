@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollegeMath.App.Views.FunctionsHomeView"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             BackgroundColor="{StaticResource backgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Funções" FontSize="32" TextColor="White" Margin="34,8,0,0" HorizontalOptions="CenterAndExpand"></Label>
+                <ImageButton x:Name="btnAjudaFunctions" Source="lightbulbHelp.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaFunctions_Clicked" VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72">
+                <Button
+                x:Name="btnNivel1"
+                    Text="Nível 1"
+                Style="{StaticResource btnNiveis}"
+                 Clicked="btnNivel1_Clicked"
+                />
+                <Button
+                    Text="Nível 2"
+                x:Name="btnNivel2"
+                Style="{StaticResource btnNiveis}"
+                />
+                <Button
+                x:Name="btnNivel3"
+                    Text="Nível 3"
+                Style="{StaticResource btnNiveis}"
+                />
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
