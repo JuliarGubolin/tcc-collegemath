@@ -43,16 +43,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Rg.Plugins.Popup": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Xamarin.Forms.PancakeView": {
-              "target": "Package",
-              "version": "[2.3.0.759, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
