@@ -1,4 +1,8 @@
+using CollegeMath.Application.Applications;
+using CollegeMath.Application.Interfaces;
 using CollegeMath.Infra.Context;
+using CollegeMath.Infra.Interfaces;
+using CollegeMath.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +16,9 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
 builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IContentApplication, ContentApplication>();
+builder.Services.AddScoped<IContentRepository, ContentRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

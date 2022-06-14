@@ -485,6 +485,10 @@
         }
       },
       "CollegeMath.Application/1.0.0": {
+        "dependencies": {
+          "CollegeMath.Domain": "1.0.0",
+          "CollegeMath.Infra": "1.0.0"
+        },
         "runtime": {
           "CollegeMath.Application.dll": {}
         }
