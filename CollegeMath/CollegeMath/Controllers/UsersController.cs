@@ -17,7 +17,7 @@ namespace CollegeMath.Controllers
         [HttpPut]
         public IActionResult Update(UsuarioDTO usuarioDTO)
         {
-            return Ok();
+            return Ok(); 
         }
         [HttpDelete]
         public IActionResult Delete(int Id)

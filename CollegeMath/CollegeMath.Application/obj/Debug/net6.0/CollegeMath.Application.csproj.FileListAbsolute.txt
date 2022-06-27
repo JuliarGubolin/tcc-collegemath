@@ -27,3 +27,8 @@ D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Domain.pdb
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Infra.pdb
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.csproj.CopyComplete
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Domain.dll
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Infra.dll
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Domain.pdb
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Application\bin\Debug\net6.0\CollegeMath.Infra.pdb
+D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Application\obj\Debug\net6.0\CollegeMath.Application.csproj.CopyComplete

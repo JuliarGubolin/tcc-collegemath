@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollegeMath.App.Views.SolutionView">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Você errou! (ou acertou)" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="8"></Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Solução" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>
+                <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="A intersecção entre dois conjunos é dada por" HorizontalOptions="Center"></Label>
+                        <Label Text="X∩Y" HorizontalOptions="Center"></Label>
+                        <Label Text="A qual é definida pelos elementos em comum. Ex:"></Label>
+                        <Label Text="A = {1, 2, 3, 4, 5, 6, 7} e B = {6, 7, 8, 10}" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="exercice1_conjuntos_content.png"></Image>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" Margin="8">
+                        <Label Text="Como os valores 6 e 7 estão em ambos os conjuntos" HorizontalOptions="Center"></Label>
+                        <Label Text="eles representam a intersecção entre A e B." HorizontalOptions="Center"></Label>
+                        <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                        <Button
+                            FontSize="Medium"
+                            x:Name="btnNext"
+                            Text="Próxima"
+                            Style="{StaticResource btnNiveis}"
+                            Clicked="btnNext_Clicked"
+                        />
+                    </StackLayout>
+                </StackLayout>
+                
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

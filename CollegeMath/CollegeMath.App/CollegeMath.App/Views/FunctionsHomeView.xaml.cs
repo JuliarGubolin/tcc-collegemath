@@ -19,7 +19,7 @@ namespace CollegeMath.App.Views
 
         private async void btnAjudaFunctions_Clicked(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new AjudaFuncoesView());
+            await this.Navigation.PushAsync(new FunctionsHelpView());
         }
 
         private void btnNivel1_Clicked(object sender, EventArgs e)

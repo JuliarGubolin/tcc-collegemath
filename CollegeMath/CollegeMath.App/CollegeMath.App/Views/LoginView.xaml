@@ -9,7 +9,7 @@
             <StackLayout>
                 <StackLayout Padding="10">
                     <Frame CornerRadius="80" Padding="0" HeightRequest="250" WidthRequest="250" HorizontalOptions="Center">
-                        <Image Source="CollegeMathLogo.png" HeightRequest="256" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="256"/>
+                        <Image Source="CollegeMath_logo.png" HeightRequest="256" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="256"/>
                     </Frame>
                 </StackLayout>
                 <Label Text="College Math"
@@ -18,7 +18,10 @@
                 <local:RoundedEntry x:Name="txtEmail"
                        Placeholder="E-mail" Margin="0,20,0,20" PlaceholderColor="#8E8E8E" TextColor="Black" FontSize="Small"/>
                 <local:RoundedEntry x:Name="txtSenha"
-                       IsPassword="True" Placeholder="Senha" PlaceholderColor="#8E8E8E" Margin="0,0,0,20" TextColor="Black" FontSize="Small"/>
+                       IsPassword="True" Placeholder="Senha" PlaceholderColor="#8E8E8E" Margin="0,0,0,4" TextColor="Black" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="EndAndExpand" Padding="0">
+                <Button x:Name="btnEsqueceuSenha" Text="Esqueceu a senha?" Style="{StaticResource btnEsqueceuSenha}" Clicked="btnEsqueceuSenha_Clicked"></Button>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button x:Name="btnLogin" Style="{StaticResource btnLoginCadastro}" Text="Login" Clicked="btnLogin_Clicked"></Button>

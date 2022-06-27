@@ -8,7 +8,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal" >
                 <Label Text="Funções" FontSize="32" TextColor="White" Margin="34,8,0,0" HorizontalOptions="CenterAndExpand"></Label>
-                <ImageButton x:Name="btnAjudaFunctions" Source="lightbulbHelp.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaFunctions_Clicked" VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
+                <ImageButton x:Name="btnAjudaFunctions" Source="lightbulb_help.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaFunctions_Clicked" VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
             </StackLayout>
             <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72">
                 <Button

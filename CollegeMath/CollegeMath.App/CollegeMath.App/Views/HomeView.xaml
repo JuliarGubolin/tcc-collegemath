@@ -10,7 +10,7 @@
             <StackLayout VerticalOptions="StartAndExpand" >
                 <Frame BackgroundColor="{StaticResource backgroundColor}" >
                     <StackLayout HorizontalOptions="End">
-                        <ImageButton x:Name="btnAjudaHome" Source="lightbulbHelp.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaHome_Clicked"></ImageButton>
+                        <ImageButton x:Name="btnAjudaHome" Source="lightbulb_help.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaHome_Clicked"></ImageButton>
                     </StackLayout>
                 </Frame>
                 <Label Text="Escolha um conteúdo" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="White" Margin="0,16,0,0"></Label>

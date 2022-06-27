@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "62vlj9SykzBV1xeiAJ0z6zqXVD7D7y+j7BEjYj80r/EP2xSaS31i4lTqAXK4/WbDNLA0hAxQcD/iid34jFTR5w==",
+  "dgSpecHash": "yk9Z1MGbkFDgxOnK1inhqY+qJlpmbtENci7IF1V4SOXiqVk4d3pMt8XIm5s4LBfA19ihkzlg42DMVKSE0qRPYQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\CollegeMath\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
+  "projectFilePath": "D:\\workspace\\tcc-collegemath\\CollegeMath\\CollegeMath.App\\CollegeMath.App.iOS\\CollegeMath.App.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\wemer\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
-    "C:\\Users\\wemer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\wemer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\wemer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
-    "C:\\Users\\wemer\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+    "C:\\Users\\gisla\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\gisla\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
   ],
   "logs": []
 }

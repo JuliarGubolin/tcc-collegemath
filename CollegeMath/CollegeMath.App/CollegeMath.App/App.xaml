@@ -71,6 +71,16 @@
             <Setter Property="Padding" Value="4,4,4,4"></Setter>
             <Setter Property="BorderColor" Value="{StaticResource buttonColor4}"></Setter>
         </Style>
+        <Style TargetType="Button" x:Key="btnEsqueceuSenha">
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="TextColor" Value="#00A8FF" />
+            <Setter Property="WidthRequest" Value="160"></Setter>
+            <Setter Property="HeightRequest" Value="40"></Setter>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
         <!-- ___________________________________ -->
         <!--Style geral-->
         <Style TargetType="NavigationPage">

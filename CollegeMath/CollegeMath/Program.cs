@@ -17,6 +17,8 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
 builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
 
+//Indicando ao c# por quem a interface está sendo implementada
+//"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
 builder.Services.AddScoped<IContentApplication, ContentApplication>();
 builder.Services.AddScoped<IContentRepository, ContentRepository>();
 var app = builder.Build();

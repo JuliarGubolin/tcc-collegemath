@@ -16,5 +16,10 @@ namespace CollegeMath.App.Views
         {
             InitializeComponent();
         }
+
+        private async void btnVerificar_Clicked(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new SolutionView());
+        }
     }
 }
