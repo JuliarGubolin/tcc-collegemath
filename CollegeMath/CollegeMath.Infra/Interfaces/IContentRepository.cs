@@ -10,7 +10,6 @@ namespace CollegeMath.Infra.Interfaces
     public interface IContentRepository
     {
         void Insert(Content content);
-
         void Update(Content content);
         Content Find(int id);
         IEnumerable<Content> GetAll();

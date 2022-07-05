@@ -30,5 +30,10 @@ namespace CollegeMath.App.Views
         {
             this.Navigation.PushModalAsync(new ForgotPasswordView());
         }
+
+        private void btninformation_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushModalAsync(new InformationView());
+        }
     }
 }

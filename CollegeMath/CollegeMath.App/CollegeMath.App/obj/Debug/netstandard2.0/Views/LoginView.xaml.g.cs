@@ -17,6 +17,9 @@ namespace CollegeMath.App.Views {
     public partial class LoginView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ImageButton btninformation;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::CollegeMath.App.Models.Custom.RoundedEntry txtEmail;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -34,6 +37,7 @@ namespace CollegeMath.App.Views {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginView));
+            btninformation = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "btninformation");
             txtEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtEmail");
             txtSenha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtSenha");
             btnEsqueceuSenha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnEsqueceuSenha");

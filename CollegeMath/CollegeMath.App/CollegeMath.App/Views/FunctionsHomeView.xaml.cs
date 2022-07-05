@@ -24,7 +24,7 @@ namespace CollegeMath.App.Views
 
         private void btnNivel1_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new Level1_Function());
+            App.Current.MainPage = new NavigationPage(new Level1_FunctionView());
         }
     }
 }

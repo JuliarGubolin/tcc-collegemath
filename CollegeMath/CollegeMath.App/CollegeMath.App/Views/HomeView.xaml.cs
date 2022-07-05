@@ -27,5 +27,15 @@ namespace CollegeMath.App.Views
         {
             await DisplayAlert("Ajuda", "Escolha entre um dos 3 conteúdos disponíveis:\n\nFunções; \nLógica Matemática; \nConjuntos. \n\nCada um possui 3 níveis com questões para responder.", "OK");
         }
+
+        private void btnLogica_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new LogicHomeView());
+        }
+
+        private void btnConjuntos_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

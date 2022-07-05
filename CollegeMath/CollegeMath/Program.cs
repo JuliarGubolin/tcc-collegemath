@@ -21,6 +21,10 @@ builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServe
 //"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
 builder.Services.AddScoped<IContentApplication, ContentApplication>();
 builder.Services.AddScoped<IContentRepository, ContentRepository>();
+builder.Services.AddScoped<IUserApplication, UserApplication>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ILevelApplication, LevelApplication>();
+builder.Services.AddScoped<ILevelRepository, LevelRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

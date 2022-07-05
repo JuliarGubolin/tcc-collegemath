@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeMath.Infra.Migrations
 {
     [DbContext(typeof(CollegeMathContext))]
-    [Migration("20220614224440_CriacaoDoBanco")]
-    partial class CriacaoDoBanco
+    [Migration("20220629002134_teste1")]
+    partial class teste1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

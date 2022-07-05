@@ -24,7 +24,7 @@ namespace CollegeMath.App.Views
 
         private void btnVoltar_Clicked(object sender, EventArgs e)
         {
-
+            this.Navigation.PopModalAsync();
         }
     }
 }

@@ -12,20 +12,23 @@
             </StackLayout>
             <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72">
                 <Button
-                x:Name="btnNivel1"
+                    x:Name="btnNivel1"
                     Text="Nível 1"
-                Style="{StaticResource btnNiveis}"
-                 Clicked="btnNivel1_Clicked"
+                    BorderColor="{StaticResource buttonColor1}"
+                    Style="{StaticResource btnNiveis}"
+                    Clicked="btnNivel1_Clicked"
                 />
                 <Button
                     Text="Nível 2"
-                x:Name="btnNivel2"
-                Style="{StaticResource btnNiveis}"
+                    x:Name="btnNivel2"
+                    BorderColor="{StaticResource buttonColor1}"
+                    Style="{StaticResource btnNiveis}"
                 />
                 <Button
-                x:Name="btnNivel3"
+                    x:Name="btnNivel3"
                     Text="Nível 3"
-                Style="{StaticResource btnNiveis}"
+                    BorderColor="{StaticResource buttonColor1}"
+                    Style="{StaticResource btnNiveis}"
                 />
                 
             </StackLayout>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollegeMath.App.Views.Level1_Function">
+             x:Class="CollegeMath.App.Views.Level1_FunctionView">
     <ContentPage.Content>
-        <StackLayout >
+        <StackLayout>
             <StackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Questão 1" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>

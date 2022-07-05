@@ -30,7 +30,6 @@
             <Setter Property="FontSize" Value="Large"/>
             <Setter Property="TextTransform" Value="None"/>
             <Setter Property="BorderWidth" Value="2"/>
-            <Setter Property="BorderColor" Value="{StaticResource buttonColor1}"></Setter>
         </Style>
         <Style TargetType="Button" x:Key="btnFuncoes">
             <Setter Property="BackgroundColor" Value="{StaticResource buttonBackground}" />
@@ -80,6 +79,20 @@
             <Setter Property="Margin" Value="0,0,0,0"/>
             <Setter Property="FontSize" Value="Small"/>
             <Setter Property="TextTransform" Value="None"/>
+        </Style>
+        <Style TargetType="Button" x:Key="btnConteudo">
+            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="TextColor" Value="#fff" />
+            <Setter Property="WidthRequest" Value="140"></Setter>
+            <Setter Property="HeightRequest" Value="140"></Setter>
+            <Setter Property="CornerRadius" Value="70"/>
+            <Setter Property="Margin" Value="8,8,8,8"/>
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BorderColor" Value="{StaticResource buttonColor4}"></Setter>
+            <Setter Property="BorderWidth" Value="2"></Setter>
+            <Setter Property="VerticalOptions" Value="Center"></Setter>
+            <Setter Property="HorizontalOptions" Value="Center"></Setter>
         </Style>
         <!-- ___________________________________ -->
         <!--Style geral-->

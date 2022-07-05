@@ -6,6 +6,8 @@
              BackgroundColor="{StaticResource backgroundColor}">
     <ContentPage.Content>
         <StackLayout Margin="12, 12, 12, 12">
+            <ImageButton x:Name="btninformation" Source="information.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="30"
+                         HeightRequest="30" HorizontalOptions="StartAndExpand" Clicked="btninformation_Clicked"></ImageButton>
             <StackLayout>
                 <StackLayout Padding="10">
                     <Frame CornerRadius="80" Padding="0" HeightRequest="250" WidthRequest="250" HorizontalOptions="Center">

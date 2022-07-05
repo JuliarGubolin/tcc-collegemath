@@ -20,6 +20,12 @@
     <Compile Update="Views\FunctionsHelpView.xaml.cs">
       <DependentUpon>FunctionsHelpView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Level1_FunctionView.xaml.cs">
+      <DependentUpon>Level1_FunctionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LogicHomeView.xaml.cs">
+      <DependentUpon>LogicHomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\UserRegistryView.xaml.cs">
       <DependentUpon>UserRegistryView.xaml</DependentUpon>
     </Compile>
@@ -38,7 +44,13 @@
     <EmbeddedResource Update="Views\FunctionsHomeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Level1_Function.xaml">
+    <EmbeddedResource Update="Views\InformationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Level1_FunctionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LogicHomeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginView.xaml">
