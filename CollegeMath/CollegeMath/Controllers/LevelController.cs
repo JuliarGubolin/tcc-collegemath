@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CollegeMath.Controllers
 {
-    public class LevelController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LevelController : ControllerBase
     {
         private readonly ILevelApplication _levelApplication;
 
