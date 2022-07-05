@@ -1,5 +1,6 @@
 using CollegeMath.Application.Applications;
 using CollegeMath.Application.Interfaces;
+using CollegeMath.Configurations;
 using CollegeMath.Infra.Context;
 using CollegeMath.Infra.Interfaces;
 using CollegeMath.Infra.Repositories;
@@ -16,6 +17,8 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
 builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddIdentityConfig(builder.Configuration);
 
 //Indicando ao c# por quem a interface está sendo implementada
 //"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
