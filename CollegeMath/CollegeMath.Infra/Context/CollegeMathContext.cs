@@ -9,7 +9,7 @@ namespace CollegeMath.Infra.Context
         {
 
         }
-        public DbSet<User> Usuarios { get; set; }
+        //public DbSet<User> Usuarios { get; set; }
 
         public DbSet<Content> Contents { get; set; }
 

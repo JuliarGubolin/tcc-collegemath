@@ -1,8 +1,12 @@
-﻿namespace CollegeMath.Domain.Entities
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace CollegeMath.Domain.Entities
 {
     public class UserQuestionHistory : EntityBase
     {
-        public int UserId { get; set; }
+        public string UserId { get; set; }
+
+        public IdentityUser User { get; set; }
 
         public int? AlternativeId { get; set; } = null!;
 

@@ -46,7 +46,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Alternatives");
+                    b.ToTable("Alternatives", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.Content", b =>
@@ -72,7 +72,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contents");
+                    b.ToTable("Contents", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.ImageQuestion", b =>
@@ -100,7 +100,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("ImageQuestion");
+                    b.ToTable("ImageQuestion", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.Level", b =>
@@ -126,7 +126,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Levels");
+                    b.ToTable("Levels", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.Question", b =>
@@ -168,7 +168,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasIndex("QuestionTypeId");
 
-                    b.ToTable("Questions");
+                    b.ToTable("Questions", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.QuestionType", b =>
@@ -191,7 +191,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("QuestionTypes");
+                    b.ToTable("QuestionTypes", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.User", b =>
@@ -226,7 +226,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.UserQuestionHistory", b =>
@@ -256,7 +256,7 @@ namespace CollegeMath.Infra.Migrations
 
                     b.HasIndex("AlternativeId");
 
-                    b.ToTable("UserQuestionHistory");
+                    b.ToTable("UserQuestionHistory", (string)null);
                 });
 
             modelBuilder.Entity("CollegeMath.Domain.Entities.Alternative", b =>

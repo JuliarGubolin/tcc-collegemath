@@ -24,8 +24,8 @@ builder.Services.AddIdentityConfig(builder.Configuration);
 //"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
 builder.Services.AddScoped<IContentApplication, ContentApplication>();
 builder.Services.AddScoped<IContentRepository, ContentRepository>();
-builder.Services.AddScoped<IUserApplication, UserApplication>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+//builder.Services.AddScoped<IUserApplication, UserApplication>();
+//builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILevelApplication, LevelApplication>();
 builder.Services.AddScoped<ILevelRepository, LevelRepository>();
 var app = builder.Build();
@@ -38,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
