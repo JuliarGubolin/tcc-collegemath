@@ -34,6 +34,7 @@
                             Text="Próxima"
                             Style="{StaticResource btnNiveis}"
                             Clicked="btnNext_Clicked"
+                            BorderColor="{StaticResource buttonColor1}"
                         />
                     </StackLayout>
                 </StackLayout>

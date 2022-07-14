@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollegeMath.App.Views.RankingView"
+             BackgroundColor="{StaticResource backgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical" Margin="16">
+                <Image Source="ranking.png" WidthRequest="50" HeightRequest="50"></Image>
+                <Label Text="Ranking" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand"></Label>
+                <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
+            </StackLayout>
+            <ScrollView Margin="0,0,0,8">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0, 0, 0, 0">
+                    <ListView x:Name="listUser"
+                          IsPullToRefreshEnabled="True"
+                          VerticalOptions="FillAndExpand"
+                          HasUnevenRows="True">
+                        <ListView.Header>
+                            <Label Text="As três maiores pontuações estão aqui!" HorizontalOptions="Center"
+                               FontSize="Medium"
+                               TextColor="White"
+                               Margin="8"/>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame CornerRadius="12"
+                                           BorderColor="{StaticResource buttonColor4}"
+                                           IsClippedToBounds="True"
+                                           VerticalOptions="FillAndExpand"
+                                           Margin="5">
+                                        <FlexLayout Direction="Row"
+                                                    AlignItems="Center">
+                                            <StackLayout Padding="8">
+                                                <Label Text="Nome do usuário" FontSize="Medium" TextColor="White"/>
+                                                <Label Text="Pontuação do usuário" TextColor="White"/>
+                                            </StackLayout>
+                                        </FlexLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

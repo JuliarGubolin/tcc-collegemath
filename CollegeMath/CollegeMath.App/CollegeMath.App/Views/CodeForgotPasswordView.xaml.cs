@@ -10,19 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace CollegeMath.App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ForgotPasswordView : ContentPage
+    public partial class CodeForgotPasswordView : ContentPage
     {
-        public ForgotPasswordView()
+        public CodeForgotPasswordView()
         {
             InitializeComponent();
         }
 
         private void btnEnviarEmailRec_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushModalAsync(new CodeForgotPasswordView());
+
         }
 
-        private void btnVoltar_Clicked(object sender, EventArgs e)
+        private void btnReenviarEmailRec_Clicked(object sender, EventArgs e)
         {
 
         }

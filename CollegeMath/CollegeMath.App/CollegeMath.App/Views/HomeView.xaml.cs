@@ -37,5 +37,10 @@ namespace CollegeMath.App.Views
         {
 
         }
+
+        private void btnRankingHome_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushModalAsync(new RankingView());
+        }
     }
 }

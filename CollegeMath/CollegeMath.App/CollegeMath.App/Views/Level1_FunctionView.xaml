@@ -19,7 +19,7 @@
                     <Button x:Name="btnOpt4" Style="{StaticResource btnAlternativaQuestoesF}" Text="Opção 4"></Button>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button x:Name="btnVerificar" Style="{StaticResource btnFuncoes}" Text="Verificar" Clicked="btnVerificar_Clicked"></Button>
+                    <Button x:Name="btnVerificar" Style="{StaticResource btnFuncoes}" Text="Verificar" Clicked="btnVerificar_Clicked" ></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

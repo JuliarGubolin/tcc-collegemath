@@ -81,7 +81,7 @@
             <Setter Property="TextTransform" Value="None"/>
         </Style>
         <Style TargetType="Button" x:Key="btnConteudo">
-            <Setter Property="BackgroundColor" Value="{StaticResource backgroundColor}" />
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonBackground}" />
             <Setter Property="TextColor" Value="#fff" />
             <Setter Property="WidthRequest" Value="140"></Setter>
             <Setter Property="HeightRequest" Value="140"></Setter>

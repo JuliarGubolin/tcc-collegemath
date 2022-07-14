@@ -11,6 +11,7 @@
             <Label Text="Twitter logo icon by Juraj Sedlák on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Functions icon by CoreUI on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Info icon by Perpixel on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="ITrophy icon by Free Icons on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 
