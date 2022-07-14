@@ -28,6 +28,9 @@ builder.Services.AddScoped<IContentRepository, ContentRepository>();
 //builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILevelApplication, LevelApplication>();
 builder.Services.AddScoped<ILevelRepository, LevelRepository>();
+
+builder.Services.AddScoped<IQuestionApplication, QuestionApplication>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
