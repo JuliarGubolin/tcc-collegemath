@@ -23,4 +23,8 @@
     <ProjectReference Include="..\CollegeMath.Domain\CollegeMath.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
