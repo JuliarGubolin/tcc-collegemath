@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeMath.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20220721214345_Tabelas")]
-    partial class Tabelas
+    [Migration("20220721222749_Identity")]
+    partial class Identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
