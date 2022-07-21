@@ -11,11 +11,14 @@ namespace CollegeMath.Configurations
 {
     public static class IdentityConfig
     {
-        public static IServiceCollection AddIdentityConfig(this IServiceCollection services,
-            IConfiguration configuration)
+        //A classe IdentityConfig possui um método AddIdentityConfig que recebe ele mesmo (extention method)
+        public static IServiceCollection AddIdentityConfig(this IServiceCollection services, IConfiguration configuration)
         {
+            //Mesma connectionString 
             var connectionString = configuration.GetConnectionString("CollegeMathConnection");
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
+            //depois daqui, podemos rodar update database
+            //Add-Migration identity -Context ApplicationDBContext (tanho que indicar qual contexto que quero adicionar)
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                .AddRoles<IdentityRole>()

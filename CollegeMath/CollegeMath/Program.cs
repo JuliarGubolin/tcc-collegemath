@@ -18,6 +18,7 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
 builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
 
+//Chama o identityConfig
 builder.Services.AddIdentityConfig(builder.Configuration);
 
 //Indicando ao c# por quem a interface está sendo implementada
