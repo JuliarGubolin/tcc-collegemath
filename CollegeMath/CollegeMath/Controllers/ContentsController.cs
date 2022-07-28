@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CollegeMath.Controllers
 {
+    //Authorize para ser acessado apenas por quem está autenticado (protege o controller)
+    //Se eu passar o token no postman ele autoriza
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -17,7 +19,7 @@ namespace CollegeMath.Controllers
         {
             _contentApplication = contentApplication;
         }
-
+        //[AllowAnonymous] para liberar uma ação específica
         [HttpPost]
         public IActionResult Insert(ContentDTO contentDTO)
         {

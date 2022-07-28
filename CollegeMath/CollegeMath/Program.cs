@@ -35,6 +35,9 @@ builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 
 builder.Services.AddScoped<IAlternativeApplication, AlternativeApplication>();
 builder.Services.AddScoped<IAlternativeRepository, AlternativeRepository>();
+
+builder.Services.AddScoped<IImageQuestionApplication, ImageQuestionApplication>();
+builder.Services.AddScoped<IImageQuestionRepository, ImageQuestionRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

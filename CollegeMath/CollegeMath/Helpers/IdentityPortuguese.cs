@@ -2,6 +2,8 @@
 
 namespace CollegeMath.Helpers
 {
+    //Traduz as mensagens dadas pelo Identity para o português para o usuário
+    //IdentityErrorDescriber: permite sobrescrever as mensagens de erro comuns
     public class IdentityPortuguese : IdentityErrorDescriber
     {
         public override IdentityError DefaultError() { return new IdentityError { Code = nameof(DefaultError), Description = $"Ocorreu um erro desconhecido." }; }

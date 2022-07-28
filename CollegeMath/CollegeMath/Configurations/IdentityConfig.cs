@@ -17,17 +17,22 @@ namespace CollegeMath.Configurations
             //Mesma connectionString 
             var connectionString = configuration.GetConnectionString("CollegeMathConnection");
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
+
             //depois daqui, podemos rodar update database
             //Add-Migration identity -Context ApplicationDBContext (tanho que indicar qual contexto que quero adicionar)
-
+            //IdentityRole por causa da última versão
             services.AddIdentity<IdentityUser, IdentityRole>()
                .AddRoles<IdentityRole>()
+               //Usa o EF para armazenamento
                .AddEntityFrameworkStores<ApplicationDBContext>()
+               //Identitty portuguese para mensagens de erro
                .AddErrorDescriber<IdentityPortuguese>()
+               //Autenticação por Token
                .AddDefaultTokenProviders();
 
 
-            // JWT
+            // Configuraçaõ do JWT
+            //Registra o APPSettings
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
