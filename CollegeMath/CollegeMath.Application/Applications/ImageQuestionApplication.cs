@@ -2,11 +2,6 @@
 using CollegeMath.Application.Interfaces;
 using CollegeMath.Domain.Entities;
 using CollegeMath.Infra.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CollegeMath.Application.Applications
 {
@@ -23,22 +18,22 @@ namespace CollegeMath.Application.Applications
         {
             return _imageQuestionRepository.GetAll().Select(c => new ImageQuestionDTO
             {
+                Id = c.Id,
+                CreatedDate = c.CreatedDate,
                 QuestionId = c.QuestionId,
-                Question = c.Question,
                 Url = c.Url
             });
         }
 
         public void Insert(ImageQuestionDTO imageQuestionDTO)
         {
-            var imageQuestion = new ImageQuestion(imageQuestionDTO.Question, imageQuestionDTO.QuestionId, imageQuestionDTO.Url);
+            var imageQuestion = new ImageQuestion(imageQuestionDTO.QuestionId, imageQuestionDTO.Url);
             _imageQuestionRepository.Insert(imageQuestion);
         }
 
         public void Update( ImageQuestionDTO imageQuestionDTO)
         {
             var ImageQuestion = _imageQuestionRepository.Find(imageQuestionDTO.Id);
-            ImageQuestion.Question = imageQuestionDTO.Question;
             ImageQuestion.Url = imageQuestionDTO.Url;
             ImageQuestion.QuestionId = imageQuestionDTO.QuestionId;
             _imageQuestionRepository.Update(ImageQuestion);

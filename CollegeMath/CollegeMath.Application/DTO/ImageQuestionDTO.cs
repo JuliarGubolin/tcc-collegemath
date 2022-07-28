@@ -12,8 +12,6 @@ namespace CollegeMath.Application.DTO
 
         public int QuestionId { get; set; }
 
-        public Question Question { get; set; }
-
         public string Url { get; set; }
     }
 }

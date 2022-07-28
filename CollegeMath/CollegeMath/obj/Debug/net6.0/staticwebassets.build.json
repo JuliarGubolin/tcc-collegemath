@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "rK41njjofjFaCw8fx5Z1peVGB/Hqel3mRYhAcjWftLs=",
+  "Hash": "dWRUmPyZEvcG2lOPZDz1VQBKTtcdZh/FwRo9eu+KqK4=",
   "Source": "CollegeMath",
   "BasePath": "_content/CollegeMath",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "CollegeMath\\wwwroot",
+      "Source": "CollegeMath",
+      "ContentRoot": "D:\\Projetos\\CollegeMath\\tcc-collegemath\\CollegeMath\\CollegeMath\\wwwroot\\",
+      "BasePath": "_content/CollegeMath",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projetos\\CollegeMath\\tcc-collegemath\\CollegeMath\\CollegeMath\\wwwroot\\images\\testecollegemath.jpg",
+      "SourceId": "CollegeMath",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projetos\\CollegeMath\\tcc-collegemath\\CollegeMath\\CollegeMath\\wwwroot\\",
+      "BasePath": "_content/CollegeMath",
+      "RelativePath": "images/testecollegemath.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\testecollegemath.jpg"
+    }
+  ]
 }

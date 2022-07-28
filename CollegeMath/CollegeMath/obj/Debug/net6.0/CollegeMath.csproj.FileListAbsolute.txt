@@ -121,7 +121,6 @@ D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.AssemblyInfoInputs.cache
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.AssemblyInfo.cs
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.csproj.CoreCompileInputs.cache
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.MvcApplicationPartsAssemblyInfo.cs
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\staticwebassets.build.json
 D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\staticwebassets.development.json
@@ -148,3 +147,6 @@ D:\workspace\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\Microsoft.
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\CollegeMath.staticwebassets.runtime.json
+D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\obj\Debug\net6.0\CollegeMath.MvcApplicationPartsAssemblyInfo.cs
+D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath\bin\Debug\net6.0\wwwroot\images\testecollegemath.jpg
