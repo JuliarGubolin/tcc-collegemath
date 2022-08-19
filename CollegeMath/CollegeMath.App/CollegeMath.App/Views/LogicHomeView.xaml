@@ -8,8 +8,8 @@
                 <Label Text="Lógica" FontSize="32" TextColor="White" Margin="34,8,0,0" HorizontalOptions="CenterAndExpand"></Label>
                 <ImageButton x:Name="btnAjudaLogic" Source="lightbulb_help.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaLogic_Clicked"  VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
             </StackLayout>
-            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72">
-                <Button
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72" x:Name="stkLevels">
+                <!--<Button
                     x:Name="btnNivel1"
                     Text="Nível 1"
                     BorderColor="{StaticResource buttonColor2}"
@@ -29,7 +29,7 @@
                     BorderColor="{StaticResource buttonColor2}"
                     Style="{StaticResource btnNiveis}"
                     Clicked="btnNivel3_Clicked"
-                />
+                />-->
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
