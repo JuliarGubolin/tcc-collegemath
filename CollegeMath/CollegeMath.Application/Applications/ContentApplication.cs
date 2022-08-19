@@ -33,8 +33,9 @@ namespace CollegeMath.Application.Applications
 
         public void Insert(ContentDTO contentDTO)
         {
-            var content = new Content(contentDTO.Name)
+            var content = new Content()
             {
+                Name = contentDTO.Name,
                 CreatedDate = DateTime.Now,
                 Description = contentDTO.Description,
                 IsDeleted = false,

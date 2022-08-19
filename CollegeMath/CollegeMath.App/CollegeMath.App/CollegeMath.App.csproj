@@ -11,9 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.8" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CollegeMathServices\CollegeMathServices.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CollegeMath.Domain">
+      <HintPath>..\..\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

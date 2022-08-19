@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CollegeMath.Domain\CollegeMath.Domain.csproj" />
+    <Reference Include="CollegeMath.Domain">
+      <HintPath>..\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

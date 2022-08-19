@@ -10,15 +10,3 @@ D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\Col
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\refint\CollegeMath.Domain.dll
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.pdb
 D:\workspace\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\ref\CollegeMath.Domain.dll
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.deps.json
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.dll
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.pdb
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.csproj.AssemblyReference.cache
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.AssemblyInfoInputs.cache
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.AssemblyInfo.cs
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.csproj.CoreCompileInputs.cache
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.dll
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\refint\CollegeMath.Domain.dll
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\CollegeMath.Domain.pdb
-D:\Projetos\CollegeMath\tcc-collegemath\CollegeMath\CollegeMath.Domain\obj\Debug\net6.0\ref\CollegeMath.Domain.dll
