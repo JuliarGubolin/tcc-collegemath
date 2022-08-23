@@ -14,13 +14,16 @@ namespace CollegeMath.Configurations
         //A classe IdentityConfig possui um método AddIdentityConfig que recebe ele mesmo (extention method)
         public static IServiceCollection AddIdentityConfig(this IServiceCollection services, IConfiguration configuration)
         {
+            #region ConnectionString
             //Mesma connectionString 
             var connectionString = configuration.GetConnectionString("CollegeMathConnection");
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
+            #endregion
 
-            //depois daqui, podemos rodar update database
+            //depois daqui, pode rodar update database
             //Add-Migration identity -Context ApplicationDBContext (tanho que indicar qual contexto que quero adicionar)
             //IdentityRole por causa da última versão
+            #region Novo Identity (com tabelas para auxiliar na configuração do usuário)
             services.AddIdentity<IdentityUser, IdentityRole>()
                .AddRoles<IdentityRole>()
                //Usa o EF para armazenamento
@@ -29,16 +32,25 @@ namespace CollegeMath.Configurations
                .AddErrorDescriber<IdentityPortuguese>()
                //Autenticação por Token
                .AddDefaultTokenProviders();
+            #endregion
 
 
-            // Configuraçaõ do JWT
+            #region Configuração do AppSttings
+            //Configuraçaõ do JWT
             //Registra o APPSettings
+            //Configuração que está no Json
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
+            #endregion
 
+            #region Criptografar
+            //Criptografar
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            #endregion
 
+            #region Adiciona configurações da autenticação
+            //Mostra que o sistema de autenticação vai ser pelo token JWT
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -57,7 +69,7 @@ namespace CollegeMath.Configurations
                     ValidIssuer = appSettings.Emissor
                 };
             });
-
+            #endregion
 
             return services;
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CollegeMath.App.Helpers;
+using CollegeMathServices.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +23,25 @@ namespace CollegeMath.App.Views
             this.Navigation.PushModalAsync(new UserRegistryView());
         }
 
-        private void btnLogin_Clicked(object sender, EventArgs e)
+        private async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new HomeView());
+            try
+            {
+                var token = await new UserService().LoginAsync(txtEmail.Text, txtSenha.Text);
+                if (token != null) 
+                {
+                    Interfaces.ISharedPreferences sharedPreferences = DependencyService.Get<Interfaces.ISharedPreferences>();
+                    sharedPreferences.SaveUserToken(token);
+                    StoreVarsHelper.UserToken = token;
+                    App.Current.MainPage = new NavigationPage(new HomeView());
+                }
+                else
+                    await this.DisplayAlert("Aviso", "Usuário e/ou senha incorretos", "OK");
+            }
+            catch (Exception ex)
+            {
+                await this.DisplayAlert("Aviso", ex.Message, "OK");
+            }
         }
 
         private void btnEsqueceuSenha_Clicked(object sender, EventArgs e)

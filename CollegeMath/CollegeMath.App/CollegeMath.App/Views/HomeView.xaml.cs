@@ -8,20 +8,23 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CollegeMath.App.Helpers;
 
 namespace CollegeMath.App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeView : ContentPage
     {
-        string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NjA5NDc4NTEsImV4cCI6MTY2MTAzNDI1MSwiaWF0IjoxNjYwOTQ3ODUxLCJpc3MiOiJNZXVTaXN0ZW1hIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3QifQ.LlOijo5y6XN6tvu8-iqoH53Bh-guHjEF6XJGhPRP7B8";
         public HomeView()
         {
             InitializeComponent();
+            //Chamando dos conteúdos da API
             var contents = GetContents();
             CreateContents(contents);
         }
 
+        #region Criação dos botões de conteúdo na tela
+        //Cria os conteúdos na tela com os botões
         private void CreateContents(IEnumerable<ContentDTO> contents) 
         {
             foreach (var content in contents)
@@ -44,21 +47,25 @@ namespace CollegeMath.App.Views
                 stkButtons.Children.Add(button);
             }
         }
+        #endregion
 
-        
 
+        //Recebe da classe ContentServices os conteúdos baseados no token de autenticação
         private IEnumerable<ContentDTO> GetContents()
         {
-            var contentService = new ContentService(token);
+            var contentService = new ContentService(StoreVarsHelper.UserToken);
             return contentService.GetAll();
         }
 
+        #region Botões da Home
         private async void btnFuncoes_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new FunctionsHomeView());
+            //Coloquei o Await aqui
+            await this.Navigation.PushAsync(new FunctionsHomeView());
             //App.Current.MainPage = new FunctionsHomeView();
         }
 
+        
         private async void btnAjudaHome_Clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Ajuda", "Escolha entre um dos 3 conteúdos disponíveis:\n\nFunções; \nLógica Matemática; \nConjuntos. \n\nCada um possui 3 níveis com questões para responder.", "OK");
@@ -78,5 +85,13 @@ namespace CollegeMath.App.Views
         {
             this.Navigation.PushModalAsync(new RankingView());
         }
+
+        private void btnLogoutHome_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new LoginView());
+        }
+        #endregion
+
+
     }
 }

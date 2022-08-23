@@ -1,7 +1,6 @@
-﻿using CollegeMath.App.Views;
-using System;
+﻿using CollegeMath.App.Helpers;
+using CollegeMath.App.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace CollegeMath.App
 {
@@ -11,7 +10,20 @@ namespace CollegeMath.App
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginView());
+            VerifyUserSession();
+        }
+
+        private void VerifyUserSession()
+        {
+            Interfaces.ISharedPreferences sharedPreferences = DependencyService.Get<Interfaces.ISharedPreferences>();
+            string token = sharedPreferences.GetUserToken();
+            if (string.IsNullOrEmpty(token)) 
+            {
+                StoreVarsHelper.UserToken = token;
+                MainPage = new NavigationPage(new LoginView());
+            }
+            else
+                MainPage = new NavigationPage(new HomeView());
         }
 
         protected override void OnStart()

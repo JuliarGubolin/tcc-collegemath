@@ -5,13 +5,14 @@
              BackgroundColor="{StaticResource backgroundColor}">
     <ContentPage.Content>
         <StackLayout Margin="12, 24, 12, 24">
-            <Label Text="Créditos das imagens:" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Label Text="Créditos das imagens:" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White"/>
             <BoxView BackgroundColor="{StaticResource buttonColor4}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
             <Label Text="Lightbulb Icon by Vaadin Icons on IconScout" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Twitter logo icon by Juraj Sedlák on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Functions icon by CoreUI on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Info icon by Perpixel on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="ITrophy icon by Free Icons on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="Logout icon by Muhammad Huda on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

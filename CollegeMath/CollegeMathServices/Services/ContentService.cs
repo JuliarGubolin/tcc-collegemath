@@ -17,6 +17,8 @@ namespace CollegeMathServices.Services
 
         }
 
+        #region GetAll de Contents
+        //Método GET dos conteúdos para a tela da HOME
         public IEnumerable<ContentDTO> GetAll()
         {
             var result = HttpClient.GetStringAsync(urlApi + "Contents");
@@ -24,5 +26,6 @@ namespace CollegeMathServices.Services
             var response = result.Result;
             return JsonConvert.DeserializeObject<IEnumerable<ContentDTO>>(response);
         }
+        #endregion
     }
 }

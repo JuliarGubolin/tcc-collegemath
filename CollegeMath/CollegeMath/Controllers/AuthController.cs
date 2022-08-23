@@ -17,20 +17,24 @@ namespace CollegeMath.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-        //Configurações do Token
+        //Classe para Configurações do Token
         private readonly AppSettings _appSettings;
 
+        #region Construtor
         public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,
             IOptions<AppSettings> appSettings)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            //Valor das configurações do token
             _appSettings = appSettings.Value;
         }
+        #endregion
 
         //Cadastro do usuário
         //Retorna um status OK com o token do usuário
         //Envia para o banco a conta 
+        #region Registro de usuário
         [HttpPost("nova-conta")]
         public async Task<IActionResult> Register(RegisterUserDTO registerUserDTO)
         {
@@ -54,7 +58,9 @@ namespace CollegeMath.Controllers
 
             return Ok(registerUserDTO);
         }
+        #endregion
 
+        #region Login
         //Login na conta criada pelo usuário
         [HttpPost("entrar")]
         public async Task<IActionResult> Login(LoginUserDTO loginUserDTO)
@@ -70,7 +76,9 @@ namespace CollegeMath.Controllers
                 return BadRequest("Usuário e/ou senha inválidos");
             }
         }
+        #endregion
 
+        #region Geração do Token de acesso do usuário
         //Gera o Token necessário para o APP autenticar o usuário
         //Criação do loginResponse
         //Criação do AppSettings
@@ -91,8 +99,6 @@ namespace CollegeMath.Controllers
             
             return encodedToken;
         }
-
-        private static long ToUnixEpochDate(DateTime date)
-            => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
+        #endregion
     }
 }
