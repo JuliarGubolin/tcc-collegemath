@@ -4,9 +4,14 @@
              x:Class="CollegeMath.App.Views.Level1_FunctionView">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" x:Name="stkQuestao">
+                    <!--<Label Text="Questão 1" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>-->
+            </StackLayout>
             <StackLayout HorizontalOptions="CenterAndExpand">
-                <Label Text="Questão 1" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" x:Name="stkTextoQuestao">
+                
             </StackLayout>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical" Margin="16">
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>

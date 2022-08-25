@@ -17,9 +17,9 @@ namespace CollegeMath.App.Views
             InitializeComponent();
         }
 
-        private void btnEnviarEmailRec_Clicked(object sender, EventArgs e)
+        private async void btnEnviarEmailRec_Clicked(object sender, EventArgs e)
         {
-
+            await this.Navigation.PushModalAsync(new NewPasswordView());
         }
 
         private void btnReenviarEmailRec_Clicked(object sender, EventArgs e)

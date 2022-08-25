@@ -3,7 +3,7 @@
     public interface ISharedPreferences
     {
         string GetUserToken();
-
         void SaveUserToken(string token);
+        void Logout();
     }
 }

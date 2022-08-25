@@ -1,4 +1,5 @@
 using CollegeMath.Application.Applications;
+using CollegeMath.Application.Helpers;
 using CollegeMath.Application.Interfaces;
 using CollegeMath.Configurations;
 using CollegeMath.Infra.Context;
@@ -7,6 +8,8 @@ using CollegeMath.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 // Add services to the container.
 
@@ -23,6 +26,7 @@ builder.Services.AddIdentityConfig(builder.Configuration);
 
 //Indicando ao c# por quem a interface está sendo implementada
 //"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
+builder.Services.AddScoped<IEmailApplication, EmailApplication>();
 builder.Services.AddScoped<IContentApplication, ContentApplication>();
 builder.Services.AddScoped<IContentRepository, ContentRepository>();
 //builder.Services.AddScoped<IUserApplication, UserApplication>();

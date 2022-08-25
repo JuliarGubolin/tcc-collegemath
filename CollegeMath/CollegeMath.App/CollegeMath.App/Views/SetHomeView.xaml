@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollegeMath.App.Views.SetHomeView">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Teoria de Conjuntos" FontSize="32" TextColor="White" Margin="34,8,0,0" HorizontalOptions="CenterAndExpand"></Label>
+                <ImageButton x:Name="btnAjudaSet" Source="lightbulb_help.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaSet_Clicked"  VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72" x:Name="stkLevels">
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

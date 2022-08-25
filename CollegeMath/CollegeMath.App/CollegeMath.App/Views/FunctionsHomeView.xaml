@@ -10,27 +10,7 @@
                 <Label Text="Funções" FontSize="32" TextColor="White" Margin="34,8,0,0" HorizontalOptions="CenterAndExpand"></Label>
                 <ImageButton x:Name="btnAjudaFunctions" Source="lightbulb_help.png" BackgroundColor="{StaticResource backgroundColor}" WidthRequest="24" HeightRequest="24" Clicked="btnAjudaFunctions_Clicked" VerticalOptions="FillAndExpand" HorizontalOptions="End" Margin="0,0,8,0"></ImageButton>
             </StackLayout>
-            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72">
-                <Button
-                    x:Name="btnNivel1"
-                    Text="Nível 1"
-                    BorderColor="{StaticResource buttonColor1}"
-                    Style="{StaticResource btnNiveis}"
-                    Clicked="btnNivel1_Clicked"
-                />
-                <Button
-                    Text="Nível 2"
-                    x:Name="btnNivel2"
-                    BorderColor="{StaticResource buttonColor1}"
-                    Style="{StaticResource btnNiveis}"
-                />
-                <Button
-                    x:Name="btnNivel3"
-                    Text="Nível 3"
-                    BorderColor="{StaticResource buttonColor1}"
-                    Style="{StaticResource btnNiveis}"
-                />
-                
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="72" x:Name="stkLevelsFunction">
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

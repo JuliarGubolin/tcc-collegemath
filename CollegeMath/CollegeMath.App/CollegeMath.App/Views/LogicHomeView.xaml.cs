@@ -60,9 +60,9 @@ namespace CollegeMath.App.Views
 
         }
 
-        private void btnAjudaLogic_Clicked(object sender, EventArgs e)
+        private async void btnAjudaLogic_Clicked(object sender, EventArgs e)
         {
-
+            await this.Navigation.PushAsync(new LogicHelpView());
         }
     }
 }

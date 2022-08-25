@@ -10,6 +10,9 @@
                 <Label Text="Ranking" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand"></Label>
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
             </StackLayout>
+            <StackLayout x:Name="stkUsers">
+                
+            </StackLayout>
             <ScrollView Margin="0,0,0,8">
                 <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0, 0, 0, 0">
                     <ListView x:Name="listUser"
@@ -33,8 +36,8 @@
                                         <FlexLayout Direction="Row"
                                                     AlignItems="Center">
                                             <StackLayout Padding="8">
-                                                <Label Text="Nome do usuário" FontSize="Medium" TextColor="White"/>
-                                                <Label Text="Pontuação do usuário" TextColor="White"/>
+                                                <Label Text="{Binding Nome}" FontSize="Medium" TextColor="White"/>
+                                                <Label Text="{Binding Pontuacao}" TextColor="White"/>
                                             </StackLayout>
                                         </FlexLayout>
                                     </Frame>

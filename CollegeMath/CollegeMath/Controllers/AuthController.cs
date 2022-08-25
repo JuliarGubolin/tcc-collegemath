@@ -1,4 +1,6 @@
 ﻿using CollegeMath.Application.DTO;
+using CollegeMath.Application.Helpers;
+using CollegeMath.Application.Interfaces;
 using CollegeMath.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -19,15 +21,17 @@ namespace CollegeMath.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         //Classe para Configurações do Token
         private readonly AppSettings _appSettings;
+        private readonly IEmailApplication _emailApplication;
 
         #region Construtor
         public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,
-            IOptions<AppSettings> appSettings)
+            IOptions<AppSettings> appSettings, IEmailApplication emailApplication)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             //Valor das configurações do token
             _appSettings = appSettings.Value;
+            _emailApplication = emailApplication;
         }
         #endregion
 
@@ -54,9 +58,24 @@ namespace CollegeMath.Controllers
             {
                 //Já faz o Login para o usuário ter uma seção
                 await _signInManager.SignInAsync(user, isPersistent: false);
+                await SendRegisterEmail(user);
             }
 
             return Ok(registerUserDTO);
+        }
+
+        private async Task SendRegisterEmail(IdentityUser user)
+        {
+            string body = ReadEmbeddedResource.ReadEmbeddedResourceFile("RegisterConfirmation.html", typeof(Program).Assembly);
+
+            var emailRequest = new EmailRequest 
+            {
+                Subject = "Bem-vindo ao CollegeMath",
+                ToEmail = user.Email,
+                Body = body
+            };
+
+            await _emailApplication.SendEmailAsync(emailRequest);
         }
         #endregion
 
@@ -100,5 +119,23 @@ namespace CollegeMath.Controllers
             return encodedToken;
         }
         #endregion
+
+        #region GetAll de Usuários
+        //[HttpGet]
+        //public async Task<IActionResult> GetUsers()
+        //{
+        //var result = _signInManager.UserManager.GetUsersInRoleAsync("");
+        //return Ok(result);
+        //}
+        #endregion
+
+
+        [HttpPost("email-resetar-senha")]
+        public async Task<IActionResult> ResetPasswordEmail(LoginUserDTO loginUserDTO)
+        {
+            //enviar email se resetar senha
+            return null;
+        }
     }
+
 }

@@ -53,6 +53,7 @@ namespace CollegeMath.App.Views
         //Recebe da classe ContentServices os conteúdos baseados no token de autenticação
         private IEnumerable<ContentDTO> GetContents()
         {
+            //Não preciso mais do token estático, agr uso o token disponível na aplicação
             var contentService = new ContentService(StoreVarsHelper.UserToken);
             return contentService.GetAll();
         }
@@ -78,7 +79,7 @@ namespace CollegeMath.App.Views
 
         private void btnConjuntos_Clicked(object sender, EventArgs e)
         {
-
+            this.Navigation.PushAsync(new SetHomeView());
         }
 
         private void btnRankingHome_Clicked(object sender, EventArgs e)
@@ -88,6 +89,10 @@ namespace CollegeMath.App.Views
 
         private void btnLogoutHome_Clicked(object sender, EventArgs e)
         {
+            //Cria uam nova instancia das preferencias do token e chama o Logout para apagar o token
+            Interfaces.ISharedPreferences sharedPreferences = DependencyService.Get<Interfaces.ISharedPreferences>();
+            sharedPreferences.Logout();
+            //Chama a tela de Login
             App.Current.MainPage = new NavigationPage(new LoginView());
         }
         #endregion

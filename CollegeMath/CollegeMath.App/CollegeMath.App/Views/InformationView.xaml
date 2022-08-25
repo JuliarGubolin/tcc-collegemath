@@ -13,6 +13,8 @@
             <Label Text="Info icon by Perpixel on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="ITrophy icon by Free Icons on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Logout icon by Muhammad Huda on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="Set icon by Community on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="Math, operation icon by Situ Herrera on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

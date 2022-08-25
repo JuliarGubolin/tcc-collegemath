@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CollegeMath.Domain.Entities
+﻿namespace CollegeMath.Domain.Entities
 {
     public class Alternative : EntityBase
     {
@@ -13,5 +7,7 @@ namespace CollegeMath.Domain.Entities
         public virtual Question Question { get; set; }
 
         public bool IsCorrectAlternative { get; set; }
+
+        public string Text { get; set; }
     }
 }
