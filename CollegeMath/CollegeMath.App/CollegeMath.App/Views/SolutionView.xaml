@@ -27,16 +27,6 @@
                         <Label Text="eles representam a intersecção entre A e B." HorizontalOptions="Center"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
                     </StackLayout>
-                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
-                        <Button
-                            FontSize="Medium"
-                            x:Name="btnNext"
-                            Text="Próxima"
-                            Style="{StaticResource btnNiveis}"
-                            Clicked="btnNext_Clicked"
-                            BorderColor="{StaticResource buttonColor1}"
-                        />
-                    </StackLayout>
                 </StackLayout>
                 
             </ScrollView>

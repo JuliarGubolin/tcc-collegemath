@@ -1,4 +1,5 @@
 ﻿using CollegeMath.App.Helpers;
+using CollegeMath.App.Views.ClassesContentPage;
 using CollegeMathServices.DTOs;
 using CollegeMathServices.Services;
 using System;
@@ -15,6 +16,10 @@ namespace CollegeMath.App.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FunctionsHomeView : ContentPage
     {
+        IEnumerable<QuestionDTO> infoQuestion;
+        IEnumerable<AlternativeDTO> infoAlt;
+        int i;
+
         public FunctionsHomeView()
         {
             InitializeComponent();
@@ -48,17 +53,35 @@ namespace CollegeMath.App.Views
         {
             return new LevelService(StoreVarsHelper.UserToken).GetAll();
         }
-
-
         private async void btnAjudaFunctions_Clicked(object sender, EventArgs e)
         {
             await this.Navigation.PushAsync(new FunctionsHelpView());
         }
-
         private void btnNivel1_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new Level1_FunctionView());
+            infoQuestion = GetQuestions();
+            i = 0;
+            infoAlt = GetAlternatives();
+            //CreateViewQuestion(infoQuestion, infoAlt, 0);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, infoAlt, 0));
         }
+
+        #region GetQuestions (QuestionService)
+        private IEnumerable<QuestionDTO> GetQuestions()
+        {
+            var questionService = new QuestionService(StoreVarsHelper.UserToken);
+            return questionService.GetAll();
+        }
+        #endregion
+
+        #region GetAlternatives (AlternativeService)
+        private IEnumerable<AlternativeDTO> GetAlternatives()
+        {
+            var alternativeService = new AlternativeService(StoreVarsHelper.UserToken);
+            return alternativeService.GetAll();
+        }
+        #endregion
+
         private void btnNivel2_Clicked(object sender, EventArgs e)
         {
             //App.Current.MainPage = new NavigationPage(new Level1_FunctionView());

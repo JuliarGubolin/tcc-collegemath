@@ -18,5 +18,6 @@ namespace CollegeMathServices.DTOs
         public virtual Question Question { get; set; }
 
         public bool IsCorrectAlternative { get; set; }
+        public string Text { get; set; }
     }
 }

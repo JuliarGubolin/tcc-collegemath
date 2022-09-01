@@ -15,6 +15,8 @@
             <Label Text="Logout icon by Muhammad Huda on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Set icon by Community on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Math, operation icon by Situ Herrera on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="Pixel Art Male on freesvg" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="Cozy Town Asset Pack by shubibubi on itch.io" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

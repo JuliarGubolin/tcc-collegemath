@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollegeMath.App.Views.Level1_FunctionView">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand" x:Name="stkQuestao">
-                    <!--<Label Text="Questão 1" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>-->
+        <ScrollView>
+        <StackLayout x:Name="stkPrincipal">
+           <!-- <StackLayout HorizontalOptions="CenterAndExpand" x:Name="stkQuestao">
+                    <Label Text="Questão 1" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand" Margin="0"></Label>
             </StackLayout>
             <StackLayout HorizontalOptions="CenterAndExpand">
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
@@ -26,7 +27,8 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Button x:Name="btnVerificar" Style="{StaticResource btnFuncoes}" Text="Verificar" Clicked="btnVerificar_Clicked" ></Button>
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
