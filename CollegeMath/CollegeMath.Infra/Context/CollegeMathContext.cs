@@ -1,9 +1,11 @@
 ﻿using CollegeMath.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CollegeMath.Infra.Context
 {
-    public class CollegeMathContext : DbContext
+    public class CollegeMathContext : IdentityDbContext<ApplicationUser>
     {
         public CollegeMathContext(DbContextOptions<CollegeMathContext> options) : base(options)
         {
@@ -24,5 +26,9 @@ namespace CollegeMath.Infra.Context
         public DbSet<QuestionType> QuestionTypes { get; set; }
 
         public DbSet<UserQuestionHistory> UserQuestionHistory { get; set; }
+
+        public DbSet<Solution> Solutions { get; set; }
+
+        public DbSet<ImageSolution> ImageSolution { get; set; }
     }
 }

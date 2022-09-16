@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CollegeMath.Application.DTO
+﻿namespace CollegeMath.Application.DTO
 {
     public class QuestionDTO
     {

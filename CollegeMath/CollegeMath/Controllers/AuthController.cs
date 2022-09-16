@@ -1,6 +1,7 @@
 ﻿using CollegeMath.Application.DTO;
 using CollegeMath.Application.Helpers;
 using CollegeMath.Application.Interfaces;
+using CollegeMath.Domain.Entities;
 using CollegeMath.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -17,14 +18,14 @@ namespace CollegeMath.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         //Classe para Configurações do Token
         private readonly AppSettings _appSettings;
         private readonly IEmailApplication _emailApplication;
 
         #region Construtor
-        public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
             IOptions<AppSettings> appSettings, IEmailApplication emailApplication)
         {
             _userManager = userManager;
@@ -43,7 +44,7 @@ namespace CollegeMath.Controllers
         public async Task<IActionResult> Register(RegisterUserDTO registerUserDTO)
         {
             //Informações básicas do usuário
-            var user = new IdentityUser
+            var user = new ApplicationUser
             {
                 UserName = registerUserDTO.Email,
                 Email = registerUserDTO.Email,
@@ -64,11 +65,11 @@ namespace CollegeMath.Controllers
             return Ok(registerUserDTO);
         }
 
-        private async Task SendRegisterEmail(IdentityUser user)
+        private async Task SendRegisterEmail(ApplicationUser user)
         {
             string body = ReadEmbeddedResource.ReadEmbeddedResourceFile("RegisterConfirmation.html", typeof(Program).Assembly);
 
-            var emailRequest = new EmailRequest 
+            var emailRequest = new EmailRequest
             {
                 Subject = "Bem-vindo ao CollegeMath",
                 ToEmail = user.Email,
@@ -86,9 +87,10 @@ namespace CollegeMath.Controllers
         {
             //Verifica se o usuário está autenticado, ou seja, se email e/ou senha estão corretos (se estão no BD)
             var result = await _signInManager.PasswordSignInAsync(loginUserDTO.Email, loginUserDTO.Password, false, false);
+            var user = await _userManager.FindByEmailAsync(loginUserDTO.Email);
             if (result.Succeeded)
             {
-                return Ok(GerarJwt());
+                return Ok(GerarJwt(user.Id));
             }
             else
             {
@@ -101,12 +103,17 @@ namespace CollegeMath.Controllers
         //Gera o Token necessário para o APP autenticar o usuário
         //Criação do loginResponse
         //Criação do AppSettings
-        private string GerarJwt()
+        private string GerarJwt(string userId)
         {
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, userId),
+            };
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
             {
+                Subject = new ClaimsIdentity(claims),
                 Issuer = _appSettings.Emissor,
                 Audience = _appSettings.ValidoEm,
                 //Expiração do Token
@@ -115,7 +122,7 @@ namespace CollegeMath.Controllers
             });
 
             var encodedToken = tokenHandler.WriteToken(token);
-            
+
             return encodedToken;
         }
         #endregion

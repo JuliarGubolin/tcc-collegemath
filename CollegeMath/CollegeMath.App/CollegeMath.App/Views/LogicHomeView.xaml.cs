@@ -1,4 +1,5 @@
 ﻿using CollegeMath.App.Helpers;
+using CollegeMath.App.Views.ClassesContentPage;
 using CollegeMathServices.DTOs;
 using CollegeMathServices.Services;
 using System;
@@ -11,6 +12,9 @@ namespace CollegeMath.App.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LogicHomeView : ContentPage
     {
+        int levelId = 0;
+        int contentId = 1;
+        IEnumerable<QuestionDTO> infoQuestion;
         public LogicHomeView()
         {
             InitializeComponent();
@@ -40,24 +44,35 @@ namespace CollegeMath.App.Views
             }
         }
 
+        #region GetQuestions (QuestionService)
+        private IEnumerable<QuestionDTO> GetQuestions(int levelId)
+        {
+            var questionService = new QuestionService(StoreVarsHelper.UserToken);
+            return questionService.GetAllById(contentId, levelId);
+        }
+        #endregion
         private IEnumerable<LevelDTO> GetLevels()
         {
             return new LevelService(StoreVarsHelper.UserToken).GetAll();
         }
-
         private void btnNivel1_Clicked(object sender, EventArgs e)
         {
-
+            levelId = 1;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 
         private void btnNivel2_Clicked(object sender, EventArgs e)
         {
-
+            levelId = 2;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
-
         private void btnNivel3_Clicked(object sender, EventArgs e)
         {
-
+            levelId = 3;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 
         private async void btnAjudaLogic_Clicked(object sender, EventArgs e)

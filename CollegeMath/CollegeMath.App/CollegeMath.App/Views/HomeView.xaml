@@ -6,7 +6,9 @@
              NavigationPage.HasNavigationBar="false"
              BackgroundColor="{StaticResource backgroundColor}">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
+            
             <StackLayout VerticalOptions="StartAndExpand">
                 <Frame BackgroundColor="{StaticResource backgroundColor}" >
                     <StackLayout Orientation="Horizontal">
@@ -37,6 +39,8 @@
                 Clicked="btnConjuntos_Clicked"
                 />-->
             </StackLayout>
+            
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

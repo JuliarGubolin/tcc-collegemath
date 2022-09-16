@@ -1,53 +1,26 @@
-using CollegeMath.Application.Applications;
 using CollegeMath.Application.Helpers;
-using CollegeMath.Application.Interfaces;
 using CollegeMath.Configurations;
 using CollegeMath.Infra.Context;
-using CollegeMath.Infra.Interfaces;
-using CollegeMath.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
-// Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
-builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("CollegeMathConnection");
+//builder.Services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
 
-//Chama o identityConfig
 builder.Services.AddIdentityConfig(builder.Configuration);
 
-//Indicando ao c# por quem a interface está sendo implementada
-//"Sempre que eu pedir uma IContentApplication me devolva sua implementação no ContentRepository"
-builder.Services.AddScoped<IEmailApplication, EmailApplication>();
-builder.Services.AddScoped<IContentApplication, ContentApplication>();
-builder.Services.AddScoped<IContentRepository, ContentRepository>();
-//builder.Services.AddScoped<IUserApplication, UserApplication>();
-//builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<ILevelApplication, LevelApplication>();
-builder.Services.AddScoped<ILevelRepository, LevelRepository>();
+builder.Services.AddDependencyInjection();
 
-builder.Services.AddScoped<IQuestionApplication, QuestionApplication>();
-builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
-
-builder.Services.AddScoped<IAlternativeApplication, AlternativeApplication>();
-builder.Services.AddScoped<IAlternativeRepository, AlternativeRepository>();
-
-builder.Services.AddScoped<IImageQuestionApplication, ImageQuestionApplication>();
-builder.Services.AddScoped<IImageQuestionRepository, ImageQuestionRepository>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-}
 app.UseSwagger();
 app.UseSwaggerUI();
 

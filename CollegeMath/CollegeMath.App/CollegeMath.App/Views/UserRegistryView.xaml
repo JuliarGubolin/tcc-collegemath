@@ -15,7 +15,8 @@
                     <local:RoundedEntry x:Name="txtNome" Text="{Binding Nome}" Placeholder="Nome" Margin="0,0,0,16" PlaceholderColor="#A9A9A9" TextColor="Black"/>
                     <local:RoundedEntry x:Name="txtEmail" Text="{Binding Email}" Placeholder="E-mail" Margin="0,0,0,16" PlaceholderColor="#A9A9A9" TextColor="Black" Keyboard="Email"/>
                     <local:RoundedEntry x:Name="txtSenha" Text="{Binding Senha} "
-                       IsPassword="True" Placeholder="Senha" Margin="0,0,0,16"  PlaceholderColor="#A9A9A9" TextColor="Black"/>
+                       IsPassword="True" Placeholder="Senha" Margin="0,0,0,0"  PlaceholderColor="#A9A9A9" TextColor="Black"/>
+                    <Label  x:Name="lblDetalhesSenha" Text="OBS: a senha deve ter ao menos uma letra maiúscula, um caractere especial e um número!" FontSize="12" Margin="0,0,0,16" FontAttributes="Bold"></Label>
                     <local:RoundedEntry x:Name="txtSenhaConfirma"
                        IsPassword="True" Placeholder="Confirmar senha" PlaceholderColor="#A9A9A9" TextColor="Black">
                         <local:RoundedEntry.Behaviors>
@@ -29,13 +30,6 @@
                         Text="Salvar"
                         TextColor="White"
                         Clicked="btnSalvar_Clicked"
-                        TextTransform="None"
-                        Style="{StaticResource btnLoginCadastro}"    
-                        />
-                    <Button x:Name="btnVoltar"
-                        Text="Voltar"
-                        TextColor="White"
-                        Clicked="btnVoltar_Clicked"
                         TextTransform="None"
                         Style="{StaticResource btnLoginCadastro}"    
                         />

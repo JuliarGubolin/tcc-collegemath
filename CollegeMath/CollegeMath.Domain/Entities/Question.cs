@@ -35,6 +35,7 @@ namespace CollegeMath.Domain.Entities
         public virtual ICollection<ImageQuestion> Images { get; set; }
 
         public virtual ICollection<Alternative> Alternatives { get; set; }
-
+        
+        public virtual ICollection<Solution> Solutions { get; set; }
     }
 }

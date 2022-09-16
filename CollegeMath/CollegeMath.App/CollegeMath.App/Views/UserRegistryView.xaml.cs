@@ -29,12 +29,6 @@ namespace CollegeMath.App.Views
                 await this.DisplayAlert("Aviso", "Sem acesso à internet. Faça conexão para continuar.", "OK");
                 return;
             }
-            //Se o campo de senha for diferente do campo de confirmação de senha
-            if (!txtSenha.Text.Equals(txtSenhaConfirma.Text)) 
-            {
-                await DisplayAlert("Aviso", "As senhas não coincidem.", "OK");
-                return;
-            }
             //Se campo de email for vazio
             if(string.IsNullOrEmpty(txtEmail.Text))
             {
@@ -52,6 +46,16 @@ namespace CollegeMath.App.Views
             {
                 await DisplayAlert("Aviso", "Por favor, preencha o nome", "OK");
                 return;
+            }
+            //Se o campo de senha for diferente do campo de confirmação de senha
+            if ((txtSenha.Text != null && txtSenhaConfirma.Text != null))
+            {
+                if (!txtSenha.Text.Equals(txtSenhaConfirma.Text))
+                {
+                    await DisplayAlert("Aviso", "As senhas não coincidem.", "OK");
+                    return;
+                }
+                
             }
             //Se tudo estiver correto, cadastra o usuário e já faz seu Login salvando o token de acesso
             var userService = new UserService();
@@ -74,13 +78,6 @@ namespace CollegeMath.App.Views
             {
                 await DisplayAlert("Aviso", "Erro ao cadastrar usuário.", "OK");
             }
-        }
-        #endregion
-
-        #region Botão voltar
-        private void btnVoltar_Clicked(object sender, EventArgs e)
-        {
-            this.Navigation.PopModalAsync();
         }
         #endregion
     }

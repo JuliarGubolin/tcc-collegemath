@@ -1,4 +1,6 @@
-﻿using CollegeMathServices.DTOs;
+﻿using CollegeMath.App.Helpers;
+using CollegeMathServices.DTOs;
+using CollegeMathServices.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,52 +10,119 @@ namespace CollegeMath.App.Views.ClassesContentPage
 {
     public partial class QuestionPage : ContentPage
     {
-        int i = 0;
-        public QuestionPage(IEnumerable<QuestionDTO> questions, IEnumerable<AlternativeDTO> alternatives, int i)
+        int size=0;
+        StackLayout contentStackLayout = new StackLayout();
+        public QuestionPage(IEnumerable<QuestionDTO> questions, int i)
         {
-            Title = "ddsd";
-
-            var size = questions.Count();
+            size = questions.Count();
             var question = questions.ElementAt(i);
-            List<AlternativeDTO> questionAlternatives = new List<AlternativeDTO>();
-            foreach (AlternativeDTO alternative in alternatives)
-            {
-                if (alternative.QuestionId == question.Id)
-                {
-                    alternative.Text = Guid.NewGuid().ToString().Substring(0, 8);
-                    questionAlternatives.Add(alternative);
-                }
-            }
+            var alternatives = GetAlternatives(question.Id);
+            var images = GetImageQuestion(question.Id);
+            var imageSize = images.Count();
+            
+            Title = question.Title;
 
-            //Button answerButton = GetAnswerButton();
             BoxView boxView = GetBoxView();
-
-            Label lblTitulo = GetQuestionLabel(question);
             Label lblTexto = GetTextLabel(question);
+            ScrollView scrollView = new ScrollView();
+            
+            //Geral
+            StackLayout buttonsLayout = new StackLayout();
+            buttonsLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            buttonsLayout.VerticalOptions = LayoutOptions.EndAndExpand;
+            buttonsLayout.Orientation = StackOrientation.Vertical;
+            buttonsLayout.Margin = 4;
+            buttonsLayout.Children.Add(boxView);
 
-            var contentStackLayout = new StackLayout();
-            contentStackLayout.Children.Add(lblTitulo);
-            contentStackLayout.Children.Add(boxView);
-            foreach (var alternative in questionAlternatives)
+            StackLayout button1Layout = new StackLayout();
+            button1Layout.HorizontalOptions = LayoutOptions.Center;
+            button1Layout.Orientation = StackOrientation.Horizontal;
+
+            StackLayout button2Layout = new StackLayout();
+            button2Layout.HorizontalOptions = LayoutOptions.Center;
+            button2Layout.Orientation = StackOrientation.Horizontal;
+            int aux = 0;
+            foreach (var alternative in alternatives)
             {
-                Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative);
-                contentStackLayout.Children.Add(alternativeButton);
+                Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative, questions, i);
+                button1Layout.Children.Add(alternativeButton);
+
+                if (aux > 1)
+                {
+                    button2Layout.Children.Add(alternativeButton);
+                }
+                aux++;
             }
 
-            //contentStackLayout.Children.Add(answerButton);
-            Content = contentStackLayout;
+            contentStackLayout.Children.Add(lblTexto);
+            buttonsLayout.Children.Add(button1Layout);
+            buttonsLayout.Children.Add(button2Layout);
+            if (imageSize >0)
+            {
+                foreach(var image in images)
+                {
+                    StackLayout imageLayout = new StackLayout();
+                    imageLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
+                    var imageItem = new Image();
+                    imageItem.WidthRequest = 100;
+                    imageItem.HeightRequest = 100;
+                    //imageItem.Source = $"http://juliadev-001-site1.itempurl.com/images/ask_quest4_easy_logic.png";
+                    imageItem.Source = ImageSource.FromUri(new Uri(image.Url));
+                    imageLayout.Children.Add(imageItem);
+                    contentStackLayout.Children.Add(imageLayout);
+                }
+                
+            }
+            contentStackLayout.Children.Add(buttonsLayout);
+            scrollView.Content = contentStackLayout;
+            Content = scrollView;
         }
 
-        private Button GetAnswerButton()
+        private Button GetSolutionButton(QuestionDTO question)
         {
-            var verificarButton = new Button()
+            var solutionButton = new Button()
             {
                 Style = (Style)Application.Current.Resources["btnFuncoes"],
-                Text = "Verificar",
-
+                Text = "Solução",
             };
-            //verificarButton.Clicked += (sender, args) => btn_Verificar(questions, alternatives, i);
-            return verificarButton;
+            solutionButton.Clicked += (sender, args) => SolutionButton_Clicked(sender, args, question);
+            return solutionButton;
+        }
+
+        private Button GetNextButton(IEnumerable<QuestionDTO> questions, int i)
+        {
+            var nextButton = new Button()
+            {
+                Style = (Style)Application.Current.Resources["btnFuncoes"],
+                Text = "Próxima questão",
+            };
+            nextButton.Clicked += (sender, args) => NextButton_Clicked(sender, args, questions, i);
+
+            return nextButton;
+        }
+
+        private void SolutionButton_Clicked(object sender, EventArgs e, QuestionDTO question)
+        {
+            int id = question.Id;
+            var solution = GetSolution(id);
+            this.Navigation.PushModalAsync(new SolutionPage(solution));
+        }
+
+        private void NextButton_Clicked(object sender, EventArgs e, IEnumerable<QuestionDTO> questions, int i)
+        {
+            
+            if (i == size - 1)
+            {
+                //chama a pagina de finalização
+                App.Current.MainPage = new NavigationPage(new EndLevelView());
+            }
+            else
+            {
+                i++;
+                QuestionPage newPage = new QuestionPage(questions, i);
+                App.Current.MainPage = new NavigationPage(newPage);
+            }
+            
         }
 
         private BoxView GetBoxView()
@@ -67,29 +136,35 @@ namespace CollegeMath.App.Views.ClassesContentPage
             };
         }
 
-        private Button GetAlternativeButton(string text, bool isCorrectAlternative)
+        private Button GetAlternativeButton(string text, bool isCorrectAlternative, IEnumerable<QuestionDTO> questions, int i)
         {
             var alternativeButton = new Button
             {
                 Text = text,
                 Style = (Style)Application.Current.Resources["btnAlternativaQuestoesF"],
+                
             };
-            if(isCorrectAlternative)
-                alternativeButton.Clicked += CorrectAlternativeButton_Clicked;
+            if (isCorrectAlternative)
+                alternativeButton.Clicked += (sender, args) => CorrectAlternativeButton_Clicked(sender, args, questions, i);
             else
                 alternativeButton.Clicked += IncorrectAlternativeButton_Clicked;
 
             return alternativeButton;
         }
 
-        private void CorrectAlternativeButton_Clicked(object sender, EventArgs e)
+        private void CorrectAlternativeButton_Clicked(object sender, EventArgs e, IEnumerable<QuestionDTO> questions, int i)
         {
-            DisplayAlert("Aviso", "Legal você acertou :)", "OK");
+            DisplayAlert("Aviso", "Alternativa Correta. Parabéns!", "OK");
+            var question = questions.ElementAt(i);
+            Button solution = GetSolutionButton(question);
+            Button next = GetNextButton(questions, i);
+            contentStackLayout.Children.Add(solution);
+            contentStackLayout.Children.Add(next);
         }
 
         private void IncorrectAlternativeButton_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Aviso", "Pô, errou mermão :(", "OK");
+            DisplayAlert("Aviso", "Alternativa errada! Tente novamente.", "OK");
         }
 
         private Label GetTextLabel(QuestionDTO question)
@@ -101,28 +176,34 @@ namespace CollegeMath.App.Views.ClassesContentPage
                 TextColor = Color.White,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 Margin = 8,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
+                VerticalOptions = LayoutOptions.StartAndExpand,
             };
         }
 
-        private Label GetQuestionLabel(QuestionDTO question)
-        {
-            return new Label
-            {
-                Text = question.Text,
-                FontSize = 32,
-                TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Margin = 8,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-            };
-        }
 
-        public void btn_Verificar(IEnumerable<QuestionDTO> questions, IEnumerable<AlternativeDTO> alternatives, int i)
+        #region GetSolution
+        private IEnumerable<SolutionDTO> GetSolution(int questionId)
         {
-            i++;
-            //Level1_FunctionView teste = new Level1_FunctionView();
-            QuestionPage newPage = new QuestionPage(questions, alternatives, i);
+            var solutionService = new SolutionService(StoreVarsHelper.UserToken);
+            return solutionService.GetAllByQuestionId(questionId);
         }
+        #endregion
+
+        #region GetAlternatives (AlternativeService)
+        private IEnumerable<AlternativeDTO> GetAlternatives(int questionId)
+        {
+            var alternativeService = new AlternativeService(StoreVarsHelper.UserToken);
+            return alternativeService.GetAllById(questionId);
+        }
+        #endregion
+
+        #region GetImageQuestion
+        private IEnumerable<ImageQuestionDTO> GetImageQuestion(int questionId)
+        {
+            var imageQuestionService = new ImageQuestionService(StoreVarsHelper.UserToken);
+            return imageQuestionService.GetAllByQuestionId(questionId);
+        }
+        #endregion
+
     }
 }

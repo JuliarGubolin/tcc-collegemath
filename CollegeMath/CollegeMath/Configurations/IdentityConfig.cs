@@ -1,5 +1,6 @@
-﻿using CollegeMath.Data;
+﻿using CollegeMath.Domain.Entities;
 using CollegeMath.Helpers;
+using CollegeMath.Infra.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -17,17 +18,17 @@ namespace CollegeMath.Configurations
             #region ConnectionString
             //Mesma connectionString 
             var connectionString = configuration.GetConnectionString("CollegeMathConnection");
-            services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<CollegeMathContext>(options => options.UseSqlServer(connectionString));
             #endregion
 
             //depois daqui, pode rodar update database
             //Add-Migration identity -Context ApplicationDBContext (tanho que indicar qual contexto que quero adicionar)
             //IdentityRole por causa da última versão
             #region Novo Identity (com tabelas para auxiliar na configuração do usuário)
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                .AddRoles<IdentityRole>()
                //Usa o EF para armazenamento
-               .AddEntityFrameworkStores<ApplicationDBContext>()
+               .AddEntityFrameworkStores<CollegeMathContext>()
                //Identitty portuguese para mensagens de erro
                .AddErrorDescriber<IdentityPortuguese>()
                //Autenticação por Token

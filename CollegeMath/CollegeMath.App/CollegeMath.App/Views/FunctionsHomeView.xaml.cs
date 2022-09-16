@@ -17,9 +17,8 @@ namespace CollegeMath.App.Views
     public partial class FunctionsHomeView : ContentPage
     {
         IEnumerable<QuestionDTO> infoQuestion;
-        IEnumerable<AlternativeDTO> infoAlt;
-        int i;
-
+        int levelId = 0;
+        int contentId = 1;
         public FunctionsHomeView()
         {
             InitializeComponent();
@@ -58,37 +57,31 @@ namespace CollegeMath.App.Views
             await this.Navigation.PushAsync(new FunctionsHelpView());
         }
         private void btnNivel1_Clicked(object sender, EventArgs e)
-        {
-            infoQuestion = GetQuestions();
-            i = 0;
-            infoAlt = GetAlternatives();
-            //CreateViewQuestion(infoQuestion, infoAlt, 0);
-            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, infoAlt, 0));
+        {  
+            levelId = 1;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 
         #region GetQuestions (QuestionService)
-        private IEnumerable<QuestionDTO> GetQuestions()
+        private IEnumerable<QuestionDTO> GetQuestions(int levelId)
         {
             var questionService = new QuestionService(StoreVarsHelper.UserToken);
-            return questionService.GetAll();
-        }
-        #endregion
-
-        #region GetAlternatives (AlternativeService)
-        private IEnumerable<AlternativeDTO> GetAlternatives()
-        {
-            var alternativeService = new AlternativeService(StoreVarsHelper.UserToken);
-            return alternativeService.GetAll();
+            return questionService.GetAllById(contentId, levelId);
         }
         #endregion
 
         private void btnNivel2_Clicked(object sender, EventArgs e)
-        {
-            //App.Current.MainPage = new NavigationPage(new Level1_FunctionView());
+        {  
+            levelId = 2;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
         private void btnNivel3_Clicked(object sender, EventArgs e)
         {
-            //App.Current.MainPage = new NavigationPage(new Level1_FunctionView());
+            levelId = 3;
+            infoQuestion = GetQuestions(levelId);
+            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
     }
 }

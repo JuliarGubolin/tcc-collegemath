@@ -26,7 +26,8 @@ namespace CollegeMath.Application.Applications
             {
                 Id = c.Id,
                 IsCorrectAlternative = c.IsCorrectAlternative,
-                QuestionId = c.QuestionId
+                QuestionId = c.QuestionId,
+                Text = c.Text
             });
         }
 
