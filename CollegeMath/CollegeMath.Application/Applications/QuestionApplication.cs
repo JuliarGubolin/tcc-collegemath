@@ -33,6 +33,20 @@ namespace CollegeMath.Application.Applications
             });
         }
 
+        public IEnumerable<QuestionDTO> GetAllByContentAndLevel(GetAllQuestionDTO getAllQuestionDTO, string userId)
+        {
+            var questions = _questionRepository.GetAllByContentAndLevel(getAllQuestionDTO.LevelId, getAllQuestionDTO.ContentId, userId);
+            return questions.Select(c => new QuestionDTO
+            {
+                ContentId = c.ContentId,
+                Id = c.Id,
+                LevelId = c.LevelId,
+                QuestionTypeId = c.QuestionTypeId,
+                Text = c.Text,
+                Title = c.Title
+            });
+        }
+
         public void Insert(QuestionDTO questionDTO)
         {
             var question = new Question(questionDTO.Title, questionDTO.LevelId, questionDTO.ContentId, questionDTO.QuestionTypeId);

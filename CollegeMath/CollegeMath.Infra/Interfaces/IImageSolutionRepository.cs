@@ -5,5 +5,6 @@ namespace CollegeMath.Infra.Interfaces
     public interface IImageSolutionRepository
     {
         void Insert(ImageSolution imageSolution);
+        IEnumerable<ImageSolution> GetAll();
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CollegeMath.App.Helpers;
+using CollegeMath.App.Views.ClassesContentPage;
 
 namespace CollegeMath.App.Views
 {
@@ -62,7 +63,8 @@ namespace CollegeMath.App.Views
         private async void btnFuncoes_Clicked(object sender, EventArgs e)
         {
             //Coloquei o Await aqui
-            await this.Navigation.PushAsync(new FunctionsHomeView());
+            await this.Navigation.PushAsync(new FunctionsHomeView(0));
+            //App.Current.MainPage = new NavigationPage(new FunctionsHomeView(0));
             //App.Current.MainPage = new FunctionsHomeView();
         }
 
@@ -72,19 +74,21 @@ namespace CollegeMath.App.Views
             await DisplayAlert("Ajuda", "Escolha entre um dos 3 conteúdos disponíveis:\n\nFunções; \nLógica Matemática; \nConjuntos. \n\nCada um possui 3 níveis com questões para responder.", "OK");
         }
 
-        private void btnLogica_Clicked(object sender, EventArgs e)
+        private async void btnLogica_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new LogicHomeView());
+            //App.Current.MainPage = new NavigationPage(new LogicHomeView(0));
+            await this.Navigation.PushAsync(new LogicHomeView(0));
         }
 
-        private void btnConjuntos_Clicked(object sender, EventArgs e)
+        private async void btnConjuntos_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new SetHomeView());
+            //App.Current.MainPage = new NavigationPage(new SetHomeView(0));
+            await this.Navigation.PushAsync(new SetHomeView(0));
         }
 
         private void btnRankingHome_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushModalAsync(new RankingView());
+            this.Navigation.PushModalAsync(new RankingPage());
         }
 
         private void btnLogoutHome_Clicked(object sender, EventArgs e)

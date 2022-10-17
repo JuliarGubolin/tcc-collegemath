@@ -1,6 +1,6 @@
 ﻿namespace CollegeMath.Application.DTO
 {
-    public class ImageSolutionDTO
+    public class ImageSolutionDTO : DTOBase
     {
         public int SolutionId { get; set; }
 

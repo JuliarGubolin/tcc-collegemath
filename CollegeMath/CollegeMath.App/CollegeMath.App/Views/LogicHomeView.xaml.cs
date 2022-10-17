@@ -4,6 +4,7 @@ using CollegeMathServices.DTOs;
 using CollegeMathServices.Services;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,14 +16,14 @@ namespace CollegeMath.App.Views
         int levelId = 0;
         int contentId = 1;
         IEnumerable<QuestionDTO> infoQuestion;
-        public LogicHomeView()
+        public LogicHomeView(int level)
         {
             InitializeComponent();
             var levels = GetLevels();
-            CreateLevels(levels);
+            CreateLevels(levels, level);
         }
 
-        private void CreateLevels(IEnumerable<LevelDTO> levels)
+        private void CreateLevels(IEnumerable<LevelDTO> levels, int lvl)
         {
             foreach (var level in levels)
             {
@@ -31,47 +32,62 @@ namespace CollegeMath.App.Views
                     Text = level.Name,
                     Style = (Style)Application.Current.Resources["btnNiveis"]
                 };
-                if(level.Name.Equals("Nível 1"))
+                if (level.Name.Equals("Nível 1"))
+                {
                     button.Clicked += btnNivel1_Clicked;
-
+                    if (lvl == 1)
+                    {
+                        button.IsEnabled = false;
+                    }
+                }
                 if (level.Name.Equals("Nível 2"))
+                {
                     button.Clicked += btnNivel2_Clicked;
-
+                    if (lvl == 2)
+                    {
+                        button.IsEnabled = false;
+                    }
+                }
                 if (level.Name.Equals("Nível 3"))
+                {
                     button.Clicked += btnNivel3_Clicked;
-
+                    if (lvl == 3)
+                    {
+                        button.IsEnabled = false;
+                    }
+                }
                 stkLevels.Children.Add(button);
             }
         }
 
         #region GetQuestions (QuestionService)
-        private IEnumerable<QuestionDTO> GetQuestions(int levelId)
+        private async Task<IEnumerable<QuestionDTO>> GetQuestions(int levelId)
         {
             var questionService = new QuestionService(StoreVarsHelper.UserToken);
-            return questionService.GetAllById(contentId, levelId);
+            return await questionService.GetAllById(contentId, levelId);
         }
         #endregion
         private IEnumerable<LevelDTO> GetLevels()
         {
             return new LevelService(StoreVarsHelper.UserToken).GetAll();
         }
-        private void btnNivel1_Clicked(object sender, EventArgs e)
+        private async void btnNivel1_Clicked(object sender, EventArgs e)
         {
             levelId = 1;
-            infoQuestion = GetQuestions(levelId);
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 
-        private void btnNivel2_Clicked(object sender, EventArgs e)
+        private async void btnNivel2_Clicked(object sender, EventArgs e)
         {
             levelId = 2;
-            infoQuestion = GetQuestions(levelId);
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
-        private void btnNivel3_Clicked(object sender, EventArgs e)
+        private async void btnNivel3_Clicked(object sender, EventArgs e)
         {
             levelId = 3;
-            infoQuestion = GetQuestions(levelId);
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 

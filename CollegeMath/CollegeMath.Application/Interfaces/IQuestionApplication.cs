@@ -14,5 +14,6 @@ namespace CollegeMath.Application.Interfaces
         void Update(QuestionDTO questionDTO);
         IEnumerable<QuestionDTO> GetAll();
         void Delete(int id);
+        IEnumerable<QuestionDTO> GetAllByContentAndLevel(GetAllQuestionDTO getAllQuestionDTO, string userId);
     }
 }

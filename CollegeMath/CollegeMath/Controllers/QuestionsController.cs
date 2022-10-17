@@ -2,6 +2,7 @@
 using CollegeMath.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace CollegeMath.Controllers
 {
@@ -11,10 +12,12 @@ namespace CollegeMath.Controllers
     public class QuestionsController : ControllerBase
     {
         private readonly IQuestionApplication _questionApplication;
+        private string userId = string.Empty;
 
-        public QuestionsController(IQuestionApplication questionApplication)
+        public QuestionsController(IQuestionApplication questionApplication, IHttpContextAccessor httpContextAccessor)
         {
             _questionApplication = questionApplication;
+            userId = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         }
 
         [HttpPost]
@@ -39,10 +42,16 @@ namespace CollegeMath.Controllers
             return Ok(new { Sucesso = true });
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
+        //[HttpGet]
+        //public IActionResult GetAll()
+        //{
+        //    return Ok(_questionApplication.GetAll());
+        //}
+
+        [HttpPost("getall")]
+        public IActionResult GetAllByContentAndLevel(GetAllQuestionDTO getAllQuestionDTO)
         {
-            return Ok(_questionApplication.GetAll());
+            return Ok(_questionApplication.GetAllByContentAndLevel(getAllQuestionDTO, userId));
         }
     }
 }

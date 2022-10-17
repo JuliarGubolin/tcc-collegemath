@@ -22,9 +22,9 @@
                 <local:RoundedEntry x:Name="txtSenha"
                        IsPassword="True" Placeholder="Senha" PlaceholderColor="#8E8E8E" Margin="0,0,0,4" TextColor="Black" FontSize="Small"/>
             </StackLayout>
-            <StackLayout HorizontalOptions="EndAndExpand" Padding="0">
+            <!--<StackLayout HorizontalOptions="EndAndExpand" Padding="0">
                 <Button x:Name="btnEsqueceuSenha" Text="Esqueceu a senha?" Style="{StaticResource btnEsqueceuSenha}" Clicked="btnEsqueceuSenha_Clicked"></Button>
-            </StackLayout>
+            </StackLayout>-->
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button x:Name="btnLogin" Style="{StaticResource btnLoginCadastro}" Text="Login" Clicked="btnLogin_Clicked"></Button>
                 <Button x:Name="btnCadastrar" Style="{StaticResource btnLoginCadastro}" Text="Cadastre-se" Clicked="btnCadastrar_Clicked"></Button>

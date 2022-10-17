@@ -10,11 +10,8 @@
                 <Label Text="Ranking" FontSize="32" TextColor="White" HorizontalOptions="CenterAndExpand"></Label>
                 <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
             </StackLayout>
-            <StackLayout x:Name="stkUsers">
-                
-            </StackLayout>
             <ScrollView Margin="0,0,0,8">
-                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0, 0, 0, 0">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0, 0, 0, 0" x:Name="stkLista">
                     <ListView x:Name="listUser"
                           IsPullToRefreshEnabled="True"
                           VerticalOptions="FillAndExpand"
@@ -29,16 +26,13 @@
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame CornerRadius="12"
-                                           BorderColor="{StaticResource buttonColor4}"
+                                           BorderColor="Black"
                                            IsClippedToBounds="True"
                                            VerticalOptions="FillAndExpand"
                                            Margin="5">
-                                        <FlexLayout Direction="Row"
-                                                    AlignItems="Center">
-                                            <StackLayout Padding="8" x:Name="rankingLayout">
-                                                <Label Text="{Binding Nome}" FontSize="Medium" TextColor="White"/>
-                                                <Label Text="{Binding Pontuacao}" TextColor="White"/>
-                                            </StackLayout>
+                                        <FlexLayout Direction="Row" AlignItems="Center" x:Name="flexLabels">
+                                            <Label x:Name="nameLabel" FontSize="Medium"/>
+                                            <Label x:Name="scoreLabel" />
                                         </FlexLayout>
                                     </Frame>
                                 </ViewCell>

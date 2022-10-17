@@ -23,5 +23,15 @@ namespace CollegeMath.Application.Applications
             };
             _imageSolutionRepository.Insert(imageSolution);
         }
+        public IEnumerable<ImageSolutionDTO> GetAll()
+        {
+            return _imageSolutionRepository.GetAll().Select(c => new ImageSolutionDTO
+            {
+                Id = c.Id,
+                CreatedDate = c.CreatedDate,
+                SolutionId = c.SolutionId,
+                Url = c.Url
+            });
+        }
     }
 }

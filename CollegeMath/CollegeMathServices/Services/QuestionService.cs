@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace CollegeMathServices.Services
 {
@@ -26,13 +28,21 @@ namespace CollegeMathServices.Services
         #endregion
 
         #region GetAllById de questões
-        public IEnumerable<QuestionDTO> GetAllById(int contentId, int levelId)
+        public async Task<IEnumerable<QuestionDTO>> GetAllById(int ContentId, int LevelId)
         {
-            var result = HttpClient.GetStringAsync(urlApi + "Questions");
-            result.Wait();
-            var response = result.Result;
+            var request = new
+            {
+                contentId = ContentId,
+                levelId = LevelId,
+            };
+            var json = JsonConvert.SerializeObject(request);
+            var result = await HttpClient.PostAsync(urlApi + "Questions/getall", new StringContent(json, Encoding.UTF8, "application/json"));
+            if (!result.IsSuccessStatusCode)
+                return null;
+            
+            var response = await result.Content.ReadAsStringAsync();
             IEnumerable<QuestionDTO> allQuestions = JsonConvert.DeserializeObject<IEnumerable<QuestionDTO>>(response);
-            return allQuestions.Where(c => c.LevelId == levelId && c.ContentId == contentId);
+            return allQuestions;
         }
         #endregion
     }

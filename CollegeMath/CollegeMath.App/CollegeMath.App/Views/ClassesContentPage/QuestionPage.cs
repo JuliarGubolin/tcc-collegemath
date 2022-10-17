@@ -1,21 +1,30 @@
 ﻿using CollegeMath.App.Helpers;
 using CollegeMathServices.DTOs;
 using CollegeMathServices.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace CollegeMath.App.Views.ClassesContentPage
 {
     public partial class QuestionPage : ContentPage
     {
+        Button alternativeButton;
+        int level, content;
         int size=0;
         StackLayout contentStackLayout = new StackLayout();
         public QuestionPage(IEnumerable<QuestionDTO> questions, int i)
         {
             size = questions.Count();
+
             var question = questions.ElementAt(i);
+            level = question.LevelId;
+            content = question.ContentId;
             var alternatives = GetAlternatives(question.Id);
             var images = GetImageQuestion(question.Id);
             var imageSize = images.Count();
@@ -26,7 +35,6 @@ namespace CollegeMath.App.Views.ClassesContentPage
             Label lblTexto = GetTextLabel(question);
             ScrollView scrollView = new ScrollView();
             
-            //Geral
             StackLayout buttonsLayout = new StackLayout();
             buttonsLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
             buttonsLayout.VerticalOptions = LayoutOptions.EndAndExpand;
@@ -44,7 +52,7 @@ namespace CollegeMath.App.Views.ClassesContentPage
             int aux = 0;
             foreach (var alternative in alternatives)
             {
-                Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative, questions, i);
+                Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative, questions, i, alternative.Id);
                 button1Layout.Children.Add(alternativeButton);
 
                 if (aux > 1)
@@ -61,14 +69,13 @@ namespace CollegeMath.App.Views.ClassesContentPage
             {
                 foreach(var image in images)
                 {
-                    StackLayout imageLayout = new StackLayout();
+                    ScrollView imageLayout = new ScrollView();
                     imageLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
                     var imageItem = new Image();
-                    imageItem.WidthRequest = 100;
-                    imageItem.HeightRequest = 100;
-                    //imageItem.Source = $"http://juliadev-001-site1.itempurl.com/images/ask_quest4_easy_logic.png";
+                    imageItem.WidthRequest = 240;
+                    imageItem.HeightRequest = 160;
                     imageItem.Source = ImageSource.FromUri(new Uri(image.Url));
-                    imageLayout.Children.Add(imageItem);
+                    imageLayout.Content = imageItem;
                     contentStackLayout.Children.Add(imageLayout);
                 }
                 
@@ -80,10 +87,11 @@ namespace CollegeMath.App.Views.ClassesContentPage
 
         private Button GetSolutionButton(QuestionDTO question)
         {
+            
             var solutionButton = new Button()
             {
                 Style = (Style)Application.Current.Resources["btnFuncoes"],
-                Text = "Solução",
+                Text = "Resolução",
             };
             solutionButton.Clicked += (sender, args) => SolutionButton_Clicked(sender, args, question);
             return solutionButton;
@@ -114,7 +122,7 @@ namespace CollegeMath.App.Views.ClassesContentPage
             if (i == size - 1)
             {
                 //chama a pagina de finalização
-                App.Current.MainPage = new NavigationPage(new EndLevelView());
+                App.Current.MainPage = new NavigationPage(new EndLevelView(level, content));
             }
             else
             {
@@ -136,34 +144,57 @@ namespace CollegeMath.App.Views.ClassesContentPage
             };
         }
 
-        private Button GetAlternativeButton(string text, bool isCorrectAlternative, IEnumerable<QuestionDTO> questions, int i)
+        private Button GetAlternativeButton(string text, bool isCorrectAlternative, IEnumerable<QuestionDTO> questions, int i, int alternativeId)
         {
-            var alternativeButton = new Button
+            alternativeButton = new Button
             {
                 Text = text,
                 Style = (Style)Application.Current.Resources["btnAlternativaQuestoesF"],
                 
             };
+            var eventArgs = new AlternativeEventArgs
+            {
+                AlternativeId = alternativeId
+            };
             if (isCorrectAlternative)
-                alternativeButton.Clicked += (sender, args) => CorrectAlternativeButton_Clicked(sender, args, questions, i);
+            {
+                
+                alternativeButton.Clicked += (sender, args) => CorrectAlternativeButton_Clicked(sender, eventArgs, questions, i);
+            }
+                
             else
-                alternativeButton.Clicked += IncorrectAlternativeButton_Clicked;
+                alternativeButton.Clicked += (sender, args) =>  IncorrectAlternativeButton_Clicked(sender, eventArgs);
+
+            
 
             return alternativeButton;
         }
-
-        private void CorrectAlternativeButton_Clicked(object sender, EventArgs e, IEnumerable<QuestionDTO> questions, int i)
+        int j = 0;
+        private void CorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e, IEnumerable<QuestionDTO> questions, int i)
         {
-            DisplayAlert("Aviso", "Alternativa Correta. Parabéns!", "OK");
-            var question = questions.ElementAt(i);
-            Button solution = GetSolutionButton(question);
-            Button next = GetNextButton(questions, i);
-            contentStackLayout.Children.Add(solution);
-            contentStackLayout.Children.Add(next);
+            j++;
+            if (j == 1)
+            {
+                Task.Run(async () => 
+                {
+                    await new UserQuestionHistoryService(StoreVarsHelper.UserToken).UserScorePost(e.AlternativeId, "");
+                });
+                DisplayAlert("Aviso", "Alternativa Correta. Parabéns!", "OK");
+                var question = questions.ElementAt(i);
+                Button solution = GetSolutionButton(question);
+                Button next = GetNextButton(questions, i);
+                contentStackLayout.Children.Add(solution);
+                contentStackLayout.Children.Add(next);
+            }
+            
         }
 
-        private void IncorrectAlternativeButton_Clicked(object sender, EventArgs e)
+        private void IncorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e)
         {
+            Task.Run(async () => 
+            {
+                await new UserQuestionHistoryService(StoreVarsHelper.UserToken).UserScorePost(e.AlternativeId, "");
+            });
             DisplayAlert("Aviso", "Alternativa errada! Tente novamente.", "OK");
         }
 
@@ -204,6 +235,6 @@ namespace CollegeMath.App.Views.ClassesContentPage
             return imageQuestionService.GetAllByQuestionId(questionId);
         }
         #endregion
-
+        
     }
 }

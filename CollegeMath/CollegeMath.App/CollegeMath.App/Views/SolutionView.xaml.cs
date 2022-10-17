@@ -17,9 +17,5 @@ namespace CollegeMath.App.Views
             InitializeComponent();
         }
 
-        private void btnNext_Clicked(object sender, EventArgs e)
-        {
-            this.Navigation.PushModalAsync(new EndLevelView());
-        }
     }
 }

@@ -9,5 +9,6 @@ namespace CollegeMath.Infra.Interfaces
         Question Find(int id);
         IEnumerable<Question> GetAll();
         void Delete(Question question);
+        IEnumerable<Question> GetAllByContentAndLevel(int levelId, int contentId, string userId);
     }
 }

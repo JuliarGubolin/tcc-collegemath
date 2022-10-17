@@ -17,6 +17,10 @@
             <Label Text="Math, operation icon by Situ Herrera on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Pixel Art Male on freesvg" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
             <Label Text="Cozy Town Asset Pack by shubibubi on itch.io" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+
+            <Label Text="Questões e soluções" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White"/>
+            <BoxView BackgroundColor="{StaticResource buttonColor4}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
+            <Label Text="As soluções podem ser apresentadas por links para vídeos e sites, imagens e/ou textos. No caso dos textos, está indicado na documentação e na parte inferior o autor da resolução!" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

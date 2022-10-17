@@ -9,7 +9,7 @@ namespace CollegeMathServices.Services
     {
         #region Variáveis da Classe
         //URL da API
-        protected string urlApi = "http://juliadev-001-site1.itempurl.com/api/";
+        protected string urlApi = "http://collegemath-001-site1.atempurl.com/api/";
         protected string _token;
         //Faz as requisições
         private HttpClient _httpClient;

@@ -16,17 +16,20 @@
                 <StackLayout>
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                         <Image Source="celebration_end_level.png" HeightRequest="250" WidthRequest="250" Margin="16"></Image>
-                        <Label Text="Você recebeu pontos!" FontSize="24" HorizontalOptions="CenterAndExpand"></Label>
+                        <Label x:Name="lblPoints" FontSize="24" HorizontalOptions="CenterAndExpand"></Label>
                     </StackLayout>
-                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
-                        <Button
+                    <StackLayout x:Name="stkButonFinish" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                        <!--<Button
                             FontSize="Medium"
                             x:Name="btnFinish"
                             Text="Finalizar"
                             Style="{StaticResource btnNiveis}"
                             Clicked="btnFinish_Clicked"
                             BorderColor="{StaticResource buttonColor1}"
-                        />
+                        />-->
+                    </StackLayout>
+                    <StackLayout x:Name="stkPontos">
+                        
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

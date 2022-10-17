@@ -67,7 +67,7 @@ namespace CollegeMath.Controllers
 
         private async Task SendRegisterEmail(ApplicationUser user)
         {
-            string body = ReadEmbeddedResource.ReadEmbeddedResourceFile("RegisterConfirmation.html", typeof(Program).Assembly);
+            string body = ReadEmbeddedResource.ReadEmbeddedResourceFile("ConfirmationRegisterEmail.html", typeof(Program).Assembly);
 
             var emailRequest = new EmailRequest
             {

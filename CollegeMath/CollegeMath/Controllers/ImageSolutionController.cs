@@ -9,17 +9,22 @@ namespace CollegeMath.Controllers
     [ApiController]
     public class ImageSolutionController : ControllerBase
     {
-        private readonly IImageSolutionApplication _imageSolutionApplciation;
+        private readonly IImageSolutionApplication _imageSolutionApplication;
         public ImageSolutionController(IImageSolutionApplication imageSolutionApplication)
         {
-            _imageSolutionApplciation = imageSolutionApplication;
+            _imageSolutionApplication = imageSolutionApplication;
         }
 
         [HttpPost]
         public IActionResult Insert(ImageSolutionDTO imageSolutionDTO) 
         {
-            _imageSolutionApplciation.Insert(imageSolutionDTO);
+            _imageSolutionApplication.Insert(imageSolutionDTO);
             return Ok();
+        }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_imageSolutionApplication.GetAll());
         }
     }
 }

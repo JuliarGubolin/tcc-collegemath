@@ -26,9 +26,6 @@ namespace CollegeMath.App.Views {
         private global::CollegeMath.App.Models.Custom.RoundedEntry txtSenha;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnEsqueceuSenha;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button btnLogin;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -40,7 +37,6 @@ namespace CollegeMath.App.Views {
             btninformation = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "btninformation");
             txtEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtEmail");
             txtSenha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::CollegeMath.App.Models.Custom.RoundedEntry>(this, "txtSenha");
-            btnEsqueceuSenha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnEsqueceuSenha");
             btnLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnLogin");
             btnCadastrar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnCadastrar");
         }
