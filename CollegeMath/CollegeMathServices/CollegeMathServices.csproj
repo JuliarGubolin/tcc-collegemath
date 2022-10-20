@@ -8,10 +8,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="CollegeMath.Domain">
-      <HintPath>..\CollegeMath.Domain\bin\Debug\net6.0\CollegeMath.Domain.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

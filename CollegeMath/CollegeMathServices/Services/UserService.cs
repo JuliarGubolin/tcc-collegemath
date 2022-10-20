@@ -33,7 +33,7 @@ namespace CollegeMathServices.Services
             //Passando o JSON para a API
             var response = await HttpClient.PostAsync(urlApi + "auth/entrar", new StringContent(json, Encoding.UTF8, "application/json"));
             //Caso o login aconteça com sucesso, recebo o token e envio para a aplicação
-            if (response.IsSuccessStatusCode)
+           if (response.IsSuccessStatusCode)
                 //Lê o conteúdo da resposta como String
                 token = await response.Content.ReadAsStringAsync();
 

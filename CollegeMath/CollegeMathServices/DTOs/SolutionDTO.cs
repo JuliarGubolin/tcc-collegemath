@@ -1,7 +1,5 @@
-﻿using CollegeMath.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CollegeMathServices.DTOs
 {
@@ -14,13 +12,13 @@ namespace CollegeMathServices.DTOs
         public bool IsDeleted { get; set; }
         public int QuestionId { get; set; }
 
-        public virtual Question Question { get; set; }
+        public virtual QuestionDTO Question { get; set; }
 
         public string Title { get; set; }
 
         public string Text { get; set; }
 
-        public virtual ICollection<ImageSolution> Images { get; set; }
+        public virtual ICollection<ImageSolutionDTO> Images { get; set; }
         
     }
 }

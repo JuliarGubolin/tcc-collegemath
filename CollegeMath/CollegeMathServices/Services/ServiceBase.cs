@@ -47,7 +47,7 @@ namespace CollegeMathServices.Services
                     , false
                 )
                 {
-                    BaseAddress = new Uri("http://juliadev-001-site1.itempurl.com/api/"),
+                    BaseAddress = new Uri("http://collegemath-001-site1.atempurl.com/api/"),
                 };
 
                 if (!string.IsNullOrWhiteSpace(_token))

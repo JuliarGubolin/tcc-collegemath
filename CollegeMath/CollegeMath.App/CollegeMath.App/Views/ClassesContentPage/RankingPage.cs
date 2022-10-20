@@ -55,7 +55,6 @@ namespace CollegeMath.App.Views.ClassesContentPage
                     f.AlignItems = FlexAlignItems.Center;
                     f.Children.Add(stk);
                     Label nameLabel = new Label();
-                    nameLabel.HorizontalTextAlignment = TextAlignment.Center;
                     CustomEmailConverter cust = new CustomEmailConverter();
                     //nameLabel.SetBinding(Label.TextProperty, "UserName", BindingMode.Default, cust);
                     nameLabel.SetBinding(Label.TextProperty, new Binding("UserName", BindingMode.Default, cust, null, "Usuário: {0:d}"));
@@ -64,7 +63,6 @@ namespace CollegeMath.App.Views.ClassesContentPage
                     scoreLabel.SetBinding(Label.TextProperty, new Binding("UserScore", BindingMode.OneWay,
                                         null, null, "Pontuação: {0:d} pontos"));
                     scoreLabel.TextColor = Color.White;
-                    scoreLabel.HorizontalTextAlignment = TextAlignment.Center;
                     stk.Children.Add(nameLabel);
                     stk.Children.Add(scoreLabel);
 

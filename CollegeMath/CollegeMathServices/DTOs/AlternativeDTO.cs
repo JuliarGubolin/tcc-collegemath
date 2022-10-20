@@ -1,7 +1,4 @@
-﻿using CollegeMath.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace CollegeMathServices.DTOs
 {
@@ -15,7 +12,7 @@ namespace CollegeMathServices.DTOs
 
         public int QuestionId { get; set; }
 
-        public virtual Question Question { get; set; }
+        public QuestionDTO Question { get; set; }
 
         public bool IsCorrectAlternative { get; set; }
         public string Text { get; set; }

@@ -37,7 +37,7 @@ namespace CollegeMath.Infra.Repositories
 
         public List<UserQuestionHistory> GetUserQuestionHistory(string userId)
         {
-            return _collegeMathContext.UserQuestionHistory.Include(c=>c.Alternative).Where(c => !c.IsDeleted && c.UserId == userId).ToList();
+            return _collegeMathContext.UserQuestionHistory.Include(c => c.Alternative).Where(c => !c.IsDeleted && c.UserId == userId).ToList();
         }
 
         public List<UserRankingHelper> GetUsersRanking()
@@ -46,12 +46,53 @@ namespace CollegeMath.Infra.Repositories
             var usersCorrectQuestions = new List<UserRankingHelper>();
             foreach (var user in users)
             {
-                usersCorrectQuestions.Add(new UserRankingHelper
+                //usersCorrectQuestions.Add(new UserRankingHelper
+                //{
+                //    UserId = user.Id,
+                //    UserName = user.UserName,
+                //    CorrectQuestionsCount = _collegeMathContext.UserQuestionHistory
+                //    .Include(c => c.Alternative).Where(c =>  c.UserId == user.Id &&
+                //    _collegeMathContext.UserQuestionHistory.Include(x=>x.Alternative)
+                //    .Where(z => z.Alternative.QuestionId == c.Alternative.QuestionId && z.UserId == user.Id)
+                //    .OrderBy(c=>c.CreatedDate).Select(x => x.Alternative.IsCorrectAlternative).First() == true).Count()
+                //});
+
+                if (_collegeMathContext.UserQuestionHistory.Any(c => c.UserId == user.Id))
                 {
-                    UserId = user.Id,
-                    UserName = user.UserName,
-                    CorrectQuestionsCount = _collegeMathContext.UserQuestionHistory.Include(c => c.Alternative).Where(c => c.Alternative.IsCorrectAlternative && c.UserId == user.Id).Count()
-                });
+                    var correctQuestion = new UserRankingHelper
+                    {
+                        UserId = user.Id,
+                        UserName = user.UserName,
+                    };
+
+                    correctQuestion.CorrectQuestionsCount = _collegeMathContext.UserQuestionHistory
+                        .Include(c => c.Alternative).Where(c => c.UserId == user.Id && c.Alternative.IsCorrectAlternative &&
+                        c.AlternativeId ==
+                        _collegeMathContext.UserQuestionHistory.Include(c => c.Alternative)
+                        .Where(x => x.Alternative.QuestionId == c.Alternative.QuestionId && x.UserId == user.Id)
+                        .OrderBy(c => c.AnsweredIn).FirstOrDefault().AlternativeId).Count();
+
+                    usersCorrectQuestions.Add(correctQuestion);
+                }
+
+                //var question = new UserRankingHelper
+                //{
+                //    UserId = user.Id,
+                //    UserName = user.UserName,
+                //};
+                //var correctQuestionsCount = (from uqh in _collegeMathContext.UserQuestionHistory.Include(z=>z.Alternative)
+                //join alternative in _collegeMathContext.Alternatives on uqh.AlternativeId equals alternative.Id
+                //where !uqh.IsDeleted && uqh.UserId == user.Id
+                //&&
+                //(from u in _collegeMathContext.UserQuestionHistory.Include(z => z.Alternative)
+                // join aa in _collegeMathContext.Alternatives on uqh.AlternativeId equals aa.Id
+                // where !u.IsDeleted && uqh.UserId == user.Id
+                // orderby u.CreatedDate
+                // select u.Alternative.IsCorrectAlternative).FirstOrDefault() == true
+                // select uqh.Id).Count();
+
+                //question.CorrectQuestionsCount = correctQuestionsCount;
+                //usersCorrectQuestions.Add(question);
             }
             return usersCorrectQuestions;
         }

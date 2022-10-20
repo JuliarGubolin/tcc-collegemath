@@ -39,6 +39,13 @@ namespace CollegeMath.App.Views
                     return;
                 }
                 //Recebe o token retornado da função de Login do UserService
+            
+                if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSenha.Text))
+                {
+                    await this.DisplayAlert("Aviso", "Digite usuário e senha para continuar", "OK");
+                    return;
+                }
+
                 var token = await new UserService().LoginAsync(txtEmail.Text, txtSenha.Text);
                 if (token != null) 
                 {

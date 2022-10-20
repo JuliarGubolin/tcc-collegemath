@@ -66,26 +66,27 @@ namespace CollegeMath.App.Views
         private async Task<IEnumerable<QuestionDTO>> GetQuestions(int levelId)
         {
             var questionService = new QuestionService(StoreVarsHelper.UserToken);
-            return await questionService.GetAllById(contentId, levelId);
+            var quest = await questionService.GetAllById(contentId, levelId);
+            return quest;
         }
         #endregion
-        private void btnNivel1_Clicked(object sender, EventArgs e)
+        private async void btnNivel1_Clicked(object sender, EventArgs e)
         {
             levelId = 1;
-            Task.Run(async () => { infoQuestion = await GetQuestions(levelId); }); ;
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
 
-        private void btnNivel2_Clicked(object sender, EventArgs e)
+        private async void btnNivel2_Clicked(object sender, EventArgs e)
         {
             levelId = 2;
-            Task.Run(async () => { infoQuestion = await GetQuestions(levelId); }); ;
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
-        private void btnNivel3_Clicked(object sender, EventArgs e)
+        private async void btnNivel3_Clicked(object sender, EventArgs e)
         {
             levelId = 3;
-            Task.Run(async () => { infoQuestion = await GetQuestions(levelId); }); ;
+            infoQuestion = await GetQuestions(levelId);
             App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
         }
         private IEnumerable<LevelDTO> GetLevels()

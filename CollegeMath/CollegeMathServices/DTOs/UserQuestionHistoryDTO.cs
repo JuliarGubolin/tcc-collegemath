@@ -1,5 +1,4 @@
-﻿using CollegeMath.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -18,7 +17,7 @@ namespace CollegeMathServices.DTOs
 
         public int? AlternativeId { get; set; }
 
-        public virtual Alternative Alternative { get; set; }
+        public AlternativeDTO Alternative { get; set; }
 
         public DateTime AnsweredIn { get; set; }
     }

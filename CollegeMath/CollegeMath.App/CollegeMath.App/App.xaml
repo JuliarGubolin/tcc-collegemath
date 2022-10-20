@@ -46,7 +46,10 @@
             <Setter Property="BackgroundColor" Value="{StaticResource buttonColor1}" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="CornerRadius" Value="4"/>
-            <Setter Property="Margin" Value="4,4,4,4"/>
+            <Setter Property="Padding" Value="4,4,4,4"/>
+            <Setter Property="WidthRequest" Value="150"></Setter>
+            <Setter Property="MinimumWidthRequest" Value="100"></Setter>
+            <!--<Setter Property="Margin" Value="4,4,4,4"/>-->
             <Setter Property="FontSize" Value="Small"/>
             <Setter Property="TextTransform" Value="None"/>
             <Setter Property="BorderWidth" Value="2"/>
