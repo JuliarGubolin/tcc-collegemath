@@ -19,7 +19,7 @@ namespace CollegeMath.App.Views
 
         public void GenerateRanking()
         {
-            var ranking = new UserQuestionHistoryService(StoreVarsHelper.UserToken).GetUsersRanking(3);
+            var ranking = new UserQuestionHistoryService(StoreVarsHelper.UserToken).GetUsersRanking(5);
             listUser.ItemsSource = ranking;
         }
     }

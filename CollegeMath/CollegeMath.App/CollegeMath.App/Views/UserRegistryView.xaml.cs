@@ -72,7 +72,7 @@ namespace CollegeMath.App.Views
                     App.Current.MainPage = new NavigationPage(new HomeView());
                 }
                 else
-                    await DisplayAlert("Aviso", "Erro ao efetuar acesso.", "OK");
+                    await DisplayAlert("Aviso", "A senha deve possuir PELO MENOS um caractere especial, um número e uma letra maiúscula.", "OK");
             }
             else 
             {

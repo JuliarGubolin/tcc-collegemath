@@ -14,24 +14,24 @@
                     <StackLayout>
                         <Label Text="Nível 1" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
-                        <Label Text="Operações lógicas e Tabelas-Verdade"></Label>
+                        <Label Text="Operações lógicas e Tabelas-Verdade" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 2" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
-                        <Label Text="Operações lógicas e Tabelas-Verdade"></Label>
-                        <Label Text="Lógica aplicada a algum contexto"></Label>
+                        <Label Text="Operações lógicas e Tabelas-Verdade" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Lógica aplicada a algum contexto" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 3" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
-                        <Label Text="Operações lógicas e Tabelas-Verdade"></Label>
-                        <Label Text="Lógica aplicada a algum contexto"></Label>
-                        <Label Text="Lógica em conjunto com outro conteúdo"></Label>
+                        <Label Text="Operações lógicas e Tabelas-Verdade" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Lógica aplicada a algum contexto" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Lógica em conjunto com outro conteúdo" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
 

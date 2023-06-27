@@ -63,7 +63,7 @@ namespace CollegeMath.App.Views
         private async void btnFuncoes_Clicked(object sender, EventArgs e)
         {
             //Coloquei o Await aqui
-            await this.Navigation.PushAsync(new FunctionsHomeView(0));
+            await this.Navigation.PushAsync(new FunctionsHomeView());
             //App.Current.MainPage = new NavigationPage(new FunctionsHomeView(0));
             //App.Current.MainPage = new FunctionsHomeView();
         }
@@ -77,13 +77,13 @@ namespace CollegeMath.App.Views
         private async void btnLogica_Clicked(object sender, EventArgs e)
         {
             //App.Current.MainPage = new NavigationPage(new LogicHomeView(0));
-            await this.Navigation.PushAsync(new LogicHomeView(0));
+            await this.Navigation.PushAsync(new LogicHomeView());
         }
 
         private async void btnConjuntos_Clicked(object sender, EventArgs e)
         {
             //App.Current.MainPage = new NavigationPage(new SetHomeView(0));
-            await this.Navigation.PushAsync(new SetHomeView(0));
+            await this.Navigation.PushAsync(new SetHomeView());
         }
 
         private void btnRankingHome_Clicked(object sender, EventArgs e)

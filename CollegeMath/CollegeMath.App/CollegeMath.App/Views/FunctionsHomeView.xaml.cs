@@ -18,15 +18,15 @@ namespace CollegeMath.App.Views
     {
         IEnumerable<QuestionDTO> infoQuestion;
         int levelId = 0;
-        int contentId = 1;
-        public FunctionsHomeView(int level)
+        int contentId = 2;
+        public FunctionsHomeView()
         {
             InitializeComponent();
             var levels = GetLevels();
-            CreateLevels(levels, level);
+            CreateLevels(levels);
         }
 
-        private void CreateLevels(IEnumerable<LevelDTO> levels, int lvl)
+        private void CreateLevels(IEnumerable<LevelDTO> levels)
         {
             foreach (var level in levels)
             {
@@ -38,27 +38,15 @@ namespace CollegeMath.App.Views
                 if (level.Name.Equals("Nível 1"))
                 {
                     button.Clicked += btnNivel1_Clicked;
-                    if (lvl == 1)
-                    {
-                        button.IsEnabled = false;
-                    }
                 }
 
                 if (level.Name.Equals("Nível 2"))
                 {
                     button.Clicked += btnNivel2_Clicked;
-                    if (lvl == 2)
-                    {
-                        button.IsEnabled = false;
-                    }
                 }
                 if (level.Name.Equals("Nível 3"))
                 {
                     button.Clicked += btnNivel3_Clicked;
-                    if (lvl == 3)
-                    {
-                        button.IsEnabled = false;
-                    }
                 }
                 stkLevelsFunction.Children.Add(button);
             }
@@ -76,7 +64,15 @@ namespace CollegeMath.App.Views
         {
             levelId = 1;
             infoQuestion = await GetQuestions(levelId);
-            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
+            if(infoQuestion.Count()!=0)
+            {
+                App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0, 0));
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Você já finalizou este nível deste conteúdo!", "OK");
+            }
+            
 
         }
 
@@ -93,13 +89,27 @@ namespace CollegeMath.App.Views
         {
             levelId = 2;
             infoQuestion = await GetQuestions(levelId);
-            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
+            if (infoQuestion.Count() != 0)
+            {
+                App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0, 0));
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Você já finalizou este nível deste conteúdo!", "OK");
+            }
         }
         private async void btnNivel3_Clicked(object sender, EventArgs e)
         {
             levelId = 3;
             infoQuestion = await GetQuestions(levelId);
-            App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0));
+            if (infoQuestion.Count() != 0)
+            {
+                App.Current.MainPage = new NavigationPage(new QuestionPage(infoQuestion, 0, 0));
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Você já finalizou este nível deste conteúdo!", "OK");
+            }
         }
     }
 }

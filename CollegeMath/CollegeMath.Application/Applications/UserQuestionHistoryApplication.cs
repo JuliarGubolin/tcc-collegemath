@@ -14,9 +14,12 @@ namespace CollegeMath.Application.Applications
     {
         private readonly IUserQuestionHistoryRepository _userQuestionHistoryRepository;
 
-        public UserQuestionHistoryApplication(IUserQuestionHistoryRepository userQuestionHistoryRepository)
+        private readonly IQuestionRepository _questionRepository;
+
+        public UserQuestionHistoryApplication(IUserQuestionHistoryRepository userQuestionHistoryRepository, IQuestionRepository questionRepository)
         {
             _userQuestionHistoryRepository = userQuestionHistoryRepository;
+            _questionRepository = questionRepository;
         }
 
         public void Delete(int id)
@@ -39,8 +42,29 @@ namespace CollegeMath.Application.Applications
         {
             var history = _userQuestionHistoryRepository.GetUserQuestionHistory(userId);
             var userScoreDto = new UserScoreDTO();
-            userScoreDto.UserQuestionHistory = history.Select(c => new UserQuestionHistoryDTO { AlternativeId = c.AlternativeId, AnsweredIn = c.AnsweredIn, UserId = c.UserId }).ToList();
-            userScoreDto.UserScore = history.Where(c => c.Alternative.IsCorrectAlternative).Count() * 10;
+            userScoreDto.UserQuestionHistory = history.Select(c => new UserQuestionHistoryDTO { 
+                AlternativeId = c.AlternativeId, AnsweredIn = c.AnsweredIn, UserId = c.UserId }).ToList();
+
+            var alternatives = history.Select(c => c.Alternative);
+            var pontuacao = 0;
+            foreach (Alternative alternative in alternatives)
+            {
+                var questionId = alternative.QuestionId;
+                var question = _questionRepository.Find(questionId);
+                var level = question.LevelId;
+                if(alternative.IsCorrectAlternative == true && level == 1)
+                {
+                    pontuacao = pontuacao + 2;
+                }else if (alternative.IsCorrectAlternative == true && level == 2)
+                {
+                    pontuacao = pontuacao + 3;
+                }
+                else if (alternative.IsCorrectAlternative == true && level == 3)
+                {
+                    pontuacao = pontuacao + 5;
+                }
+            }
+            userScoreDto.UserScore = pontuacao;
             return userScoreDto;
         }
 

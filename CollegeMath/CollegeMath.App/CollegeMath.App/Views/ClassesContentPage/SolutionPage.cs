@@ -62,11 +62,12 @@ namespace CollegeMath.App.Views.ClassesContentPage
         private Button GetButtonLinkSolution(SolutionDTO solution)
         {
             Button btnLink = new Button();
-            btnLink.BackgroundColor = Color.FromHex("#202060");
-            btnLink.BorderColor = Color.FromHex("#2b2b80");
+            btnLink.BackgroundColor = Color.FromHex("#2b2b80");
+            btnLink.BorderColor = Color.FromHex("#502080");
             btnLink.BorderWidth = 2;
             btnLink.CornerRadius = 4;
             btnLink.Text = "Resolução (clique aqui)";
+            btnLink.TextColor = Color.White;
             btnLink.TextTransform = TextTransform.None;
             btnLink.Margin = 16;
             string textBotao = "";

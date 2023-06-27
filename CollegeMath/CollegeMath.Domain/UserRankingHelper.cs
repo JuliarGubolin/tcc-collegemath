@@ -14,12 +14,6 @@ namespace CollegeMath.Domain
 
         public int CorrectQuestionsCount { get; set; }
 
-        public int UserScore
-        {
-            get
-            {
-                return CorrectQuestionsCount * 10;
-            }
-        }
+        public int UserScore { get; set; }
     }
 }

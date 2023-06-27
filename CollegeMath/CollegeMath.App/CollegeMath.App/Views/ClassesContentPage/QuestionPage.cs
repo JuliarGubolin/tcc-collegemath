@@ -18,71 +18,72 @@ namespace CollegeMath.App.Views.ClassesContentPage
         int level, content;
         int size=0;
         StackLayout contentStackLayout = new StackLayout();
-        public QuestionPage(IEnumerable<QuestionDTO> questions, int i)
+        public QuestionPage(IEnumerable<QuestionDTO> questions, int i, int pontuacao)
         {
-            size = questions.Count();
+                size = questions.Count();
 
-            var question = questions.ElementAt(i);
-            level = question.LevelId;
-            content = question.ContentId;
-            var alternatives = GetAlternatives(question.Id);
-            var images = GetImageQuestion(question.Id);
-            var imageSize = images.Count();
-            
-            Title = question.Title;
+                var question = questions.ElementAt(i);
+                level = question.LevelId;
+                content = question.ContentId;
+                var alternatives = GetAlternatives(question.Id);
+                var images = GetImageQuestion(question.Id);
+                var imageSize = images.Count();
 
-            BoxView boxView = GetBoxView();
-            Label lblTexto = GetTextLabel(question);
-            ScrollView scrollView = new ScrollView();
-            
-            StackLayout buttonsLayout = new StackLayout();
-            buttonsLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
-            buttonsLayout.VerticalOptions = LayoutOptions.EndAndExpand;
-            buttonsLayout.Orientation = StackOrientation.Vertical;
-            buttonsLayout.Margin = 4;
-            buttonsLayout.Children.Add(boxView);
+                Title = question.Title + " de 10 - Acertos: "+ pontuacao;
 
-            StackLayout button1Layout = new StackLayout();
-            button1Layout.HorizontalOptions = LayoutOptions.Center;
-            button1Layout.Orientation = StackOrientation.Horizontal;
+                BoxView boxView = GetBoxView();
+                Label lblTexto = GetTextLabel(question);
+                ScrollView scrollView = new ScrollView();
 
-            StackLayout button2Layout = new StackLayout();
-            button2Layout.HorizontalOptions = LayoutOptions.Center;
-            button2Layout.Orientation = StackOrientation.Horizontal;
-            int aux = 0;
-            foreach (var alternative in alternatives)
-            {
-                Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative, questions, i, alternative.Id);
-                button1Layout.Children.Add(alternativeButton);
+                StackLayout buttonsLayout = new StackLayout();
+                buttonsLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
+                buttonsLayout.VerticalOptions = LayoutOptions.EndAndExpand;
+                buttonsLayout.Orientation = StackOrientation.Vertical;
+                buttonsLayout.Margin = 4;
+                buttonsLayout.Children.Add(boxView);
 
-                if (aux > 1)
+                StackLayout button1Layout = new StackLayout();
+                button1Layout.HorizontalOptions = LayoutOptions.Center;
+                button1Layout.Orientation = StackOrientation.Horizontal;
+
+                StackLayout button2Layout = new StackLayout();
+                button2Layout.HorizontalOptions = LayoutOptions.Center;
+                button2Layout.Orientation = StackOrientation.Horizontal;
+                int aux = 0;
+                foreach (var alternative in alternatives)
                 {
-                    button2Layout.Children.Add(alternativeButton);
-                }
-                aux++;
-            }
+                    Button alternativeButton = GetAlternativeButton(alternative.Text, alternative.IsCorrectAlternative, questions, i, alternative.Id, pontuacao);
+                    button1Layout.Children.Add(alternativeButton);
 
-            contentStackLayout.Children.Add(lblTexto);
-            buttonsLayout.Children.Add(button1Layout);
-            buttonsLayout.Children.Add(button2Layout);
-            if (imageSize >0)
-            {
-                foreach(var image in images)
-                {
-                    ScrollView imageLayout = new ScrollView();
-                    imageLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
-                    var imageItem = new Image();
-                    imageItem.WidthRequest = 240;
-                    imageItem.HeightRequest = 160;
-                    imageItem.Source = ImageSource.FromUri(new Uri(image.Url));
-                    imageLayout.Content = imageItem;
-                    contentStackLayout.Children.Add(imageLayout);
+                    if (aux > 1)
+                    {
+                        button2Layout.Children.Add(alternativeButton);
+                    }
+                    aux++;
                 }
-                
-            }
-            contentStackLayout.Children.Add(buttonsLayout);
-            scrollView.Content = contentStackLayout;
-            Content = scrollView;
+
+                contentStackLayout.Children.Add(lblTexto);
+                buttonsLayout.Children.Add(button1Layout);
+                buttonsLayout.Children.Add(button2Layout);
+                if (imageSize > 0)
+                {
+                    foreach (var image in images)
+                    {
+                        ScrollView imageLayout = new ScrollView();
+                        imageLayout.HorizontalOptions = LayoutOptions.CenterAndExpand;
+                        var imageItem = new Image();
+                        imageItem.WidthRequest = 240;
+                        imageItem.HeightRequest = 160;
+                        imageItem.Source = ImageSource.FromUri(new Uri(image.Url));
+                        imageLayout.Content = imageItem;
+                        contentStackLayout.Children.Add(imageLayout);
+                    }
+
+                }
+                contentStackLayout.Children.Add(buttonsLayout);
+                scrollView.Content = contentStackLayout;
+                Content = scrollView;
+            
         }
 
         private Button GetSolutionButton(QuestionDTO question)
@@ -97,14 +98,14 @@ namespace CollegeMath.App.Views.ClassesContentPage
             return solutionButton;
         }
 
-        private Button GetNextButton(IEnumerable<QuestionDTO> questions, int i)
+        private Button GetNextButton(IEnumerable<QuestionDTO> questions, int i, int pontuacao)
         {
             var nextButton = new Button()
             {
                 Style = (Style)Application.Current.Resources["btnFuncoes"],
                 Text = "Próxima questão",
             };
-            nextButton.Clicked += (sender, args) => NextButton_Clicked(sender, args, questions, i);
+            nextButton.Clicked += (sender, args) => NextButton_Clicked(sender, args, questions, i, pontuacao);
 
             return nextButton;
         }
@@ -116,7 +117,7 @@ namespace CollegeMath.App.Views.ClassesContentPage
             this.Navigation.PushModalAsync(new SolutionPage(solution));
         }
 
-        private void NextButton_Clicked(object sender, EventArgs e, IEnumerable<QuestionDTO> questions, int i)
+        private void NextButton_Clicked(object sender, EventArgs e, IEnumerable<QuestionDTO> questions, int i, int pontuacao)
         {
             
             if (i == size - 1)
@@ -127,7 +128,7 @@ namespace CollegeMath.App.Views.ClassesContentPage
             else
             {
                 i++;
-                QuestionPage newPage = new QuestionPage(questions, i);
+                QuestionPage newPage = new QuestionPage(questions, i, pontuacao);
                 App.Current.MainPage = new NavigationPage(newPage);
             }
             
@@ -144,7 +145,7 @@ namespace CollegeMath.App.Views.ClassesContentPage
             };
         }
 
-        private Button GetAlternativeButton(string text, bool isCorrectAlternative, IEnumerable<QuestionDTO> questions, int i, int alternativeId)
+        private Button GetAlternativeButton(string text, bool isCorrectAlternative, IEnumerable<QuestionDTO> questions, int i, int alternativeId, int pontuacao)
         {
             alternativeButton = new Button
             {
@@ -159,43 +160,55 @@ namespace CollegeMath.App.Views.ClassesContentPage
             if (isCorrectAlternative)
             {
                 
-                alternativeButton.Clicked += (sender, args) => CorrectAlternativeButton_Clicked(sender, eventArgs, questions, i);
+                alternativeButton.Clicked += (sender, args) => CorrectAlternativeButton_Clicked(sender, eventArgs, questions, i, pontuacao);
             }
                 
             else
-                alternativeButton.Clicked += (sender, args) =>  IncorrectAlternativeButton_Clicked(sender, eventArgs);
+                alternativeButton.Clicked += (sender, args) =>  IncorrectAlternativeButton_Clicked(sender, eventArgs, questions, i, pontuacao);
 
             
 
             return alternativeButton;
         }
         int j = 0;
-        private void CorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e, IEnumerable<QuestionDTO> questions, int i)
+        private void CorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e, IEnumerable<QuestionDTO> questions, int i, int pontuacao)
         {
             j++;
+            DisplayAlert("Aviso", "Alternativa Correta. Parabéns!", "OK");
+            pontuacao = pontuacao + 1;
             if (j == 1)
             {
                 Task.Run(async () => 
                 {
                     await new UserQuestionHistoryService(StoreVarsHelper.UserToken).UserScorePost(e.AlternativeId, "");
                 });
-                DisplayAlert("Aviso", "Alternativa Correta. Parabéns!", "OK");
+                
                 var question = questions.ElementAt(i);
                 Button solution = GetSolutionButton(question);
-                Button next = GetNextButton(questions, i);
+                Button next = GetNextButton(questions, i, pontuacao);
                 contentStackLayout.Children.Add(solution);
                 contentStackLayout.Children.Add(next);
             }
             
         }
-
-        private void IncorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e)
+        private void IncorrectAlternativeButton_Clicked(object sender, AlternativeEventArgs e,IEnumerable<QuestionDTO> questions, int i, int pontuacao)
         {
-            Task.Run(async () => 
-            {
-                await new UserQuestionHistoryService(StoreVarsHelper.UserToken).UserScorePost(e.AlternativeId, "");
-            });
+            j++;
             DisplayAlert("Aviso", "Alternativa errada! Tente novamente.", "OK");
+            if (j == 1)
+            {
+                Task.Run(async () =>
+                {
+                    await new UserQuestionHistoryService(StoreVarsHelper.UserToken).UserScorePost(e.AlternativeId, "");
+                });
+                
+                var question = questions.ElementAt(i);
+                Button solution = GetSolutionButton(question);
+                Button next = GetNextButton(questions, i, pontuacao);
+                contentStackLayout.Children.Add(solution);
+                contentStackLayout.Children.Add(next);
+            }
+            
         }
 
         private Label GetTextLabel(QuestionDTO question)

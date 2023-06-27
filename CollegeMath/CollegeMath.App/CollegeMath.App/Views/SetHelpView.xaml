@@ -16,18 +16,26 @@
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
+                        <Label Text="Operações básicas entre conjuntos: união, interseção, diferença e Diagrama de Venn" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Propriedades: comutativa, associativa, distributiva" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 2" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
+                        <Label Text="Operações básicas entre conjuntos: união, interseção, diferença e Diagrama de Venn" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Propriedades: comutativa, associativa, distributiva" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Leis de Morgan" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 3" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
+                        <Label Text="Operações básicas entre conjuntos: união, interseção, diferença e Diagrama de Venn" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Propriedades: comutativa, associativa, distributiva" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Leis de Morgan" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

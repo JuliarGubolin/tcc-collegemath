@@ -4,23 +4,29 @@
              x:Class="CollegeMath.App.Views.InformationView"
              BackgroundColor="{StaticResource backgroundColor}">
     <ContentPage.Content>
-        <StackLayout Margin="12, 24, 12, 24">
-            <Label Text="Créditos das imagens:" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White"/>
+        <ScrollView Margin="12, 24, 12, 24">
+            <StackLayout>
+            <Label Text="Questões, soluções e informações!" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White" Margin="8"/>
             <BoxView BackgroundColor="{StaticResource buttonColor4}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
-            <Label Text="Lightbulb Icon by Vaadin Icons on IconScout" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Twitter logo icon by Juraj Sedlák on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Functions icon by CoreUI on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Info icon by Perpixel on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="ITrophy icon by Free Icons on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Logout icon by Muhammad Huda on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Set icon by Community on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Math, operation icon by Situ Herrera on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Pixel Art Male on freesvg" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-            <Label Text="Cozy Town Asset Pack by shubibubi on itch.io" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="• As soluções podem ser apresentadas por links para vídeos e sites, imagens e/ou textos. No caso dos textos, está indicado na documentação o autor da resolução!" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="• OBS: a pontuação só é computada se ocorre acerto da questão na PRIMEIRA tentativa!" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="• No ranking, são mostradas apenas as CINCO maiores pontuações" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="• Os acertos indicados acima da página de questão são baseados nas questões corretas assinaladas durante a rodada atual, e não de maneira total!" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
+            <Label Text="• No nível 1 de cada conteúdo, cada acerto vale 2 pontos; no nível 2, cada acerto vale 3 pontos e no nível 3 cada acerto vale 5 pontos." HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
 
-            <Label Text="Questões e soluções" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White"/>
+            <Label Text="Créditos das imagens:" HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="White" Margin="8"/>
             <BoxView BackgroundColor="{StaticResource buttonColor4}" HeightRequest="2" WidthRequest="300" Margin="8"></BoxView>
-            <Label Text="As soluções podem ser apresentadas por links para vídeos e sites, imagens e/ou textos. No caso dos textos, está indicado na documentação e na parte inferior o autor da resolução!" HorizontalOptions="StartAndExpand" FontSize="16" TextColor="White"/>
-        </StackLayout>
+            <Label Text="Lightbulb Icon by Vaadin Icons on IconScout" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Twitter logo icon by Juraj Sedlák on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Functions icon by CoreUI on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Info icon by Perpixel on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="ITrophy icon by Free Icons on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Logout icon by Muhammad Huda on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Set icon by Community on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Math, operation icon by Situ Herrera on Icon-Icons" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Pixel Art Male on freesvg" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            <Label Text="Cozy Town Asset Pack by shubibubi on itch.io" HorizontalOptions="StartAndExpand" FontSize="10" TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage> 

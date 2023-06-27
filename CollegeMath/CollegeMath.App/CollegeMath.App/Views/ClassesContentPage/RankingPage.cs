@@ -31,14 +31,14 @@ namespace CollegeMath.App.Views.ClassesContentPage
             imageStk.Children.Add(boxView);
             Label header = new Label
             {
-                Text = "As três maiores pontuações estão aqui!",
+                Text = "As maiores pontuações estão aqui!",
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.Center,
                 TextColor = Color.White,
                 Margin = 8
             };
 
-            List<UserRankingDTO> ranking = new UserQuestionHistoryService(StoreVarsHelper.UserToken).GetUsersRanking(3);
+            List<UserRankingDTO> ranking = new UserQuestionHistoryService(StoreVarsHelper.UserToken).GetUsersRanking(5);
 
 
             ListView listView = new ListView
@@ -88,7 +88,11 @@ namespace CollegeMath.App.Views.ClassesContentPage
                 {
                     imageStk,
                     header,
-                    listView
+                    new ScrollView
+                    {
+                        Content = listView
+                    }
+                    
                 }
             };
         }

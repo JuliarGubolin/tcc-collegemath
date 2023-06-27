@@ -16,19 +16,20 @@ namespace CollegeMath.App.Views
         public EndLevelView(int level, int content)
         {
             InitializeComponent();
-            //GetUserScore();
+            //var scoreDTO = GetUserScore();
             Button finish = getButtonFinish(level, content);
-            var scores = GetScore();
-            var score = scores.ElementAt(0);
-            Label lblPontos = new Label();
-            lblPontos.Text = "Pontuação atual: "+score.UserScore;
+            //var scores = g
+            //var score = scores.ElementAt(0);
+            //Label lblPontos = new Label();
+            //lblPontos.Text = "Pontuação atual: "+score.UserScore;
+            //tkButonFinish.Children.Add(lblPontos);
             stkButonFinish.Children.Add(finish);
         }
-        private IEnumerable<UserScoreDTO> GetScore()
-        {
-            var scoreService = new UserScoreService(StoreVarsHelper.UserToken);
-            return scoreService.GetAll();
-        }
+        //private IEnumerable<UserScoreDTO> GetScore()
+        //{
+        //    var scoreService = new UserScoreService(StoreVarsHelper.UserToken);
+        //    return scoreService.GetAll();
+        //}
         private Button getButtonFinish(int level, int content)
         {
             var finish = new Button
@@ -52,20 +53,9 @@ namespace CollegeMath.App.Views
         }
         #endregion
 
-        private async void btnFinish_Clicked(object sender, EventArgs e, int level, int content)
+        private void btnFinish_Clicked(object sender, EventArgs e, int level, int content)
         {
-            if(content == 1)
-            {
-                await this.Navigation.PushAsync(new LogicHomeView(level));
-            }
-            else if (content == 2)
-            {
-                await this.Navigation.PushAsync(new FunctionsHomeView(level));
-            }
-            else
-            {
-                await this.Navigation.PushAsync(new SetHomeView(level));
-            }
+            App.Current.MainPage = new NavigationPage(new HomeView());
         }
     }
 }

@@ -59,24 +59,10 @@ namespace CollegeMath.Controllers
             {
                 //Já faz o Login para o usuário ter uma seção
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                await SendRegisterEmail(user);
+                //await SendRegisterEmail(user);
             }
 
             return Ok(registerUserDTO);
-        }
-
-        private async Task SendRegisterEmail(ApplicationUser user)
-        {
-            string body = ReadEmbeddedResource.ReadEmbeddedResourceFile("ConfirmationRegisterEmail.html", typeof(Program).Assembly);
-
-            var emailRequest = new EmailRequest
-            {
-                Subject = "Bem-vindo ao CollegeMath",
-                ToEmail = user.Email,
-                Body = body
-            };
-
-            await _emailApplication.SendEmailAsync(emailRequest);
         }
         #endregion
 
@@ -126,23 +112,6 @@ namespace CollegeMath.Controllers
             return encodedToken;
         }
         #endregion
-
-        #region GetAll de Usuários
-        //[HttpGet]
-        //public async Task<IActionResult> GetUsers()
-        //{
-        //var result = _signInManager.UserManager.GetUsersInRoleAsync("");
-        //return Ok(result);
-        //}
-        #endregion
-
-
-        [HttpPost("email-resetar-senha")]
-        public async Task<IActionResult> ResetPasswordEmail(LoginUserDTO loginUserDTO)
-        {
-            //enviar email se resetar senha
-            return null;
-        }
     }
 
 }

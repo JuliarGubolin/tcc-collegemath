@@ -16,31 +16,28 @@
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
-                        <Label Text="Definição" FontSize="24" TextColor="White"></Label>
-                        <Label Text="Classifição" FontSize="16" TextColor="White" Margin="8,8,0,0"></Label>
-                        <Label Text="• Injetora" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Bijetora" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Sobrejetora" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
+                        <Label Text="Classificação de funções: injetora, bijetora e sobrejetora" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Funções do primeiro grau" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 2" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
-                        <Label Text="Operações" FontSize="16" TextColor="White" Margin="8,8,0,0"></Label>
-                        <Label Text="• Soma" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Subtração" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Divisão" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
+                        <Label Text="Funções exponenciais" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Funções compostas" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Inequações de primeiro grau" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Intervalos de funções" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Nível 3" FontSize="32" TextColor="White"></Label>
                         <BoxView BackgroundColor="{StaticResource buttonColor1}" HeightRequest="2" WidthRequest="380"></BoxView>
                     </StackLayout>
                     <StackLayout Margin="0,8,0,0">
-                        <Label Text="Mais classificações e análises" FontSize="16" TextColor="White" Margin="8,8,0,0"></Label>
-                        <Label Text="• Gráficos" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Funções trigonométricas" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
-                        <Label Text="• Funções quadráticas" FontSize="16" TextColor="White" Margin="16,2,0,0"></Label>
+                        <Label Text="Funções exponenciais" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Funções compostas" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Questões interdisciplinares" FontSize="20" TextColor="White"></Label>
+                        <Label Text="Logaritmos" FontSize="20" TextColor="White"></Label>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
