@@ -3,10 +3,12 @@
 Git para organização do aplicativo mobile CollegeMath :iphone:. Disponível apenas para Android. Sob orientação do mentor Wemerson Santos!
 :warning: Aviso: o link para o .apk da aplicação [aqui](https://drive.google.com/file/d/1qtfdWGXT08H_Q1wYIKpfUjN2m30J6Z0m/view) está disponível, porém a hospedagem da API foi **finalizada**, portanto não é mais possível utilizar!!
 
+Publiquei um artigo baseado nos resultados obtidos com este trabalho em agosto de 2023! [Acesse aqui](http://ojs.fatece.edu.br/index.php/trilhas-pedagogicas/article/view/205)
+
 ## Objetivo
 
 Este trabalho tem por objetivo auxiliar os estudantes de cursos superiores na área de exatas a compreender e exercitar conteúdos de matemática básica, sendo eles: Funções, Teoria de Conjuntos e Lógica Matemática. De acordo com as pesquisas realizadas, estes três conteúdos são essenciais para a plena compreensão das disciplinas relacionadas à matemática, sobretudo Calculo Diferencial e Integral I.
-A aplicação engloba conceitos da gamificação, como contagem de pontos, Ranking dos 5 melhores e a narrativa (feita através das imagens disponíveis durante os níveis).
+A aplicação engloba conceitos da gamificação, como contagem de pontos, ranking contendo os 5 melhores e a narrativa (feita através das imagens disponíveis durante os níveis).
 
 ## Tecnologias utilizadas
 
@@ -19,7 +21,8 @@ O backend foi construído através de uma API e utilizando JWT para autenticaç�
 
 ## Informações
 
-- As questões e suas respectivas respostas foram retiradas de sites como QConcursos, Brainly, Descomplica, entre outros
-- A hospedagem foi feita no site SmarterASPNET
-- As imagens foram feitas usando Libresprite
+- As questões e suas respectivas respostas foram retiradas de sites como QConcursos, Brainly, Descomplica, entre outros;
+- [Figma](https://www.figma.com/file/WxX5SQ5hK9OouGBDO2G9EQ/CollegeMath?type=design&node-id=0%3A1&mode=design&t=ZGZJ54W3HAsu3Znf-1) com as telas do projeto;
+- A hospedagem foi feita no site SmarterASPNET;
+- As imagens foram feitas usando Libresprite;
 - Este projeto foi finalizado.
